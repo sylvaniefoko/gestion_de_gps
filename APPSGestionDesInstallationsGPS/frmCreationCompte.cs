@@ -101,11 +101,16 @@ namespace APPSGestionDesInstallationsGPS
                 requete = "INSERT INTO `compte` (`Nom`, `prenom`, `login`, `Mot_de_passe`, `question`, `reponse`) VALUES ('" + txtNom.Text + "','" + txtPrenom.Text + "','" + txtlogin.Text + "','" + a.CryptageMD5(txtMotdepass.Text) + "','" + cboquestion.Text + "','" + a.CryptageMD5(txtreponse.Text) + "')";
                 a.ExecuteRequette(requete);
                 chargement();
-                MessageBox.Show("enregistrement effectué avec succes");
+                AccesDonnees.confirmation="enregistrement effectué avec succes";
+                frmConfirmation  f = new frmConfirmation();
+                f.ShowDialog();
             }
             else
             {
-                MessageBox.Show("saisir le mot de pass correct");
+                AccesDonnees.erreur = "saisir le mot de pass correct";                              
+                frmerreur f = new frmerreur();
+                f.ShowDialog();
+                
             }
 
         }

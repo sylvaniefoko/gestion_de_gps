@@ -50,114 +50,120 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(21)))), ((int)(((byte)(173)))));
-            this.label1.Location = new System.Drawing.Point(45, 145);
+            this.label1.Location = new System.Drawing.Point(12, 149);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 18);
+            this.label1.Size = new System.Drawing.Size(56, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nom";
+            this.label1.Text = "Nom:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(21)))), ((int)(((byte)(173)))));
-            this.label2.Location = new System.Drawing.Point(45, 201);
+            this.label2.Location = new System.Drawing.Point(12, 193);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 18);
+            this.label2.Size = new System.Drawing.Size(82, 24);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Prenom";
+            this.label2.Text = "Prenom:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(21)))), ((int)(((byte)(173)))));
-            this.label3.Location = new System.Drawing.Point(45, 236);
+            this.label3.Location = new System.Drawing.Point(12, 228);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 18);
+            this.label3.Size = new System.Drawing.Size(62, 24);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Login";
+            this.label3.Text = "Login:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(21)))), ((int)(((byte)(173)))));
-            this.label5.Location = new System.Drawing.Point(45, 319);
+            this.label5.Location = new System.Drawing.Point(12, 311);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(175, 18);
+            this.label5.Size = new System.Drawing.Size(224, 24);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Confirmer le mot de pass";
+            this.label5.Text = "Confirmer le mot de pass:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(21)))), ((int)(((byte)(173)))));
-            this.label7.Location = new System.Drawing.Point(45, 400);
+            this.label7.Location = new System.Drawing.Point(12, 394);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 18);
+            this.label7.Size = new System.Drawing.Size(92, 24);
             this.label7.TabIndex = 6;
-            this.label7.Text = "reponse";
+            this.label7.Text = "Reponse:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtNom
             // 
-            this.txtNom.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtNom.Location = new System.Drawing.Point(234, 141);
+            this.txtNom.BackColor = System.Drawing.SystemColors.Info;
+            this.txtNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNom.Location = new System.Drawing.Point(234, 146);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(239, 22);
+            this.txtNom.Size = new System.Drawing.Size(239, 27);
             this.txtNom.TabIndex = 7;
             this.txtNom.TextChanged += new System.EventHandler(this.txtNom_TextChanged);
             // 
             // txtPrenom
             // 
-            this.txtPrenom.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtPrenom.Location = new System.Drawing.Point(234, 188);
+            this.txtPrenom.BackColor = System.Drawing.SystemColors.Info;
+            this.txtPrenom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrenom.Location = new System.Drawing.Point(234, 190);
             this.txtPrenom.Name = "txtPrenom";
-            this.txtPrenom.Size = new System.Drawing.Size(239, 22);
+            this.txtPrenom.Size = new System.Drawing.Size(239, 27);
             this.txtPrenom.TabIndex = 8;
             // 
             // txtlogin
             // 
-            this.txtlogin.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtlogin.Location = new System.Drawing.Point(234, 232);
+            this.txtlogin.BackColor = System.Drawing.SystemColors.Info;
+            this.txtlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtlogin.Location = new System.Drawing.Point(234, 228);
             this.txtlogin.Name = "txtlogin";
-            this.txtlogin.Size = new System.Drawing.Size(239, 22);
+            this.txtlogin.Size = new System.Drawing.Size(239, 27);
             this.txtlogin.TabIndex = 9;
             this.txtlogin.TextChanged += new System.EventHandler(this.txtlogin_TextChanged);
             // 
             // txtMotdepass
             // 
-            this.txtMotdepass.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtMotdepass.Location = new System.Drawing.Point(234, 276);
+            this.txtMotdepass.BackColor = System.Drawing.SystemColors.Info;
+            this.txtMotdepass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMotdepass.Location = new System.Drawing.Point(234, 269);
             this.txtMotdepass.Name = "txtMotdepass";
-            this.txtMotdepass.Size = new System.Drawing.Size(239, 22);
+            this.txtMotdepass.Size = new System.Drawing.Size(239, 27);
             this.txtMotdepass.TabIndex = 10;
             this.txtMotdepass.UseSystemPasswordChar = true;
             this.txtMotdepass.TextChanged += new System.EventHandler(this.txtMotdepass_TextChanged);
             // 
             // txtconfirmer
             // 
-            this.txtconfirmer.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtconfirmer.Location = new System.Drawing.Point(234, 315);
+            this.txtconfirmer.BackColor = System.Drawing.SystemColors.Info;
+            this.txtconfirmer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtconfirmer.Location = new System.Drawing.Point(234, 308);
             this.txtconfirmer.Name = "txtconfirmer";
-            this.txtconfirmer.Size = new System.Drawing.Size(239, 22);
+            this.txtconfirmer.Size = new System.Drawing.Size(239, 27);
             this.txtconfirmer.TabIndex = 11;
             this.txtconfirmer.UseSystemPasswordChar = true;
             this.txtconfirmer.TextChanged += new System.EventHandler(this.txtconfirmer_TextChanged);
             // 
             // txtreponse
             // 
-            this.txtreponse.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtreponse.BackColor = System.Drawing.SystemColors.Info;
+            this.txtreponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtreponse.Location = new System.Drawing.Point(234, 396);
             this.txtreponse.Name = "txtreponse";
-            this.txtreponse.Size = new System.Drawing.Size(239, 22);
+            this.txtreponse.Size = new System.Drawing.Size(239, 27);
             this.txtreponse.TabIndex = 13;
             this.txtreponse.UseSystemPasswordChar = true;
             this.txtreponse.TextChanged += new System.EventHandler(this.txtreponse_TextChanged);
@@ -165,31 +171,31 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(21)))), ((int)(((byte)(173)))));
-            this.label4.Location = new System.Drawing.Point(45, 280);
+            this.label4.Location = new System.Drawing.Point(12, 272);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 18);
+            this.label4.Size = new System.Drawing.Size(117, 24);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Mot de pass";
+            this.label4.Text = "Mot de pass:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(21)))), ((int)(((byte)(173)))));
-            this.label6.Location = new System.Drawing.Point(45, 365);
+            this.label6.Location = new System.Drawing.Point(12, 357);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(144, 18);
+            this.label6.Size = new System.Drawing.Size(189, 24);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Question de securite";
+            this.label6.Text = "Question de securite:";
             // 
             // btnAnnuler
             // 
             this.btnAnnuler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(21)))), ((int)(((byte)(173)))));
             this.btnAnnuler.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrchid;
             this.btnAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnnuler.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnnuler.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnnuler.ForeColor = System.Drawing.Color.White;
             this.btnAnnuler.Location = new System.Drawing.Point(326, 445);
             this.btnAnnuler.Name = "btnAnnuler";
@@ -203,15 +209,16 @@
             // 
             this.cboquestion.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.cboquestion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboquestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboquestion.FormattingEnabled = true;
-            this.cboquestion.ItemHeight = 16;
+            this.cboquestion.ItemHeight = 20;
             this.cboquestion.Items.AddRange(new object[] {
             "Dans quelle ville se sont rencontrés vos parents ?",
             "Quel est le nom de famille de votre professeur denfance prefere ?"});
-            this.cboquestion.Location = new System.Drawing.Point(234, 359);
+            this.cboquestion.Location = new System.Drawing.Point(234, 353);
             this.cboquestion.MaxDropDownItems = 10;
             this.cboquestion.Name = "cboquestion";
-            this.cboquestion.Size = new System.Drawing.Size(239, 24);
+            this.cboquestion.Size = new System.Drawing.Size(239, 28);
             this.cboquestion.TabIndex = 16;
             this.cboquestion.SelectedIndexChanged += new System.EventHandler(this.cboquestion_SelectedIndexChanged);
             // 
@@ -233,7 +240,7 @@
             this.btnenregistrer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(21)))), ((int)(((byte)(173)))));
             this.btnenregistrer.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrchid;
             this.btnenregistrer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnenregistrer.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnenregistrer.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnenregistrer.ForeColor = System.Drawing.Color.White;
             this.btnenregistrer.Location = new System.Drawing.Point(48, 454);
             this.btnenregistrer.Name = "btnenregistrer";
@@ -267,6 +274,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCreationCompte";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmcompte";
             this.Load += new System.EventHandler(this.frmCreationCompte_Load);
             this.ResumeLayout(false);

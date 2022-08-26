@@ -50,7 +50,7 @@
             this.btnlogin.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnlogin.Location = new System.Drawing.Point(87, 335);
-            this.btnlogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnlogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(311, 55);
             this.btnlogin.TabIndex = 2;
@@ -60,32 +60,35 @@
             // 
             // txtlogin
             // 
-            this.txtlogin.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtlogin.BackColor = System.Drawing.SystemColors.Info;
             this.txtlogin.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtlogin.ForeColor = System.Drawing.Color.DarkOrchid;
             this.txtlogin.Location = new System.Drawing.Point(87, 156);
-            this.txtlogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtlogin.Margin = new System.Windows.Forms.Padding(4);
             this.txtlogin.Name = "txtlogin";
             this.txtlogin.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtlogin.Size = new System.Drawing.Size(296, 29);
+            this.txtlogin.Size = new System.Drawing.Size(226, 29);
             this.txtlogin.TabIndex = 3;
             this.txtlogin.TabStop = false;
             this.txtlogin.Tag = "";
+            this.txtlogin.Text = "Entrer le nom d\'utilisateur";
             this.txtlogin.WordWrap = false;
+            this.txtlogin.Click += new System.EventHandler(this.txtlogin_Click);
             this.txtlogin.TextChanged += new System.EventHandler(this.txtlogin_TextChanged);
             // 
             // txtmotpass
             // 
-            this.txtmotpass.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtmotpass.BackColor = System.Drawing.SystemColors.Info;
             this.txtmotpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmotpass.ForeColor = System.Drawing.Color.DarkOrchid;
             this.txtmotpass.Location = new System.Drawing.Point(87, 210);
-            this.txtmotpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmotpass.Margin = new System.Windows.Forms.Padding(4);
             this.txtmotpass.Name = "txtmotpass";
-            this.txtmotpass.Size = new System.Drawing.Size(296, 26);
+            this.txtmotpass.Size = new System.Drawing.Size(226, 26);
             this.txtmotpass.TabIndex = 4;
-            this.txtmotpass.UseSystemPasswordChar = true;
+            this.txtmotpass.Text = "Entrer votre mot de pass";
             this.txtmotpass.WordWrap = false;
+            this.txtmotpass.Click += new System.EventHandler(this.txtmotpass_Click);
             this.txtmotpass.TextChanged += new System.EventHandler(this.txtmotpass_TextChanged);
             // 
             // linkLabel1
@@ -127,7 +130,7 @@
             this.btnclose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnclose.ForeColor = System.Drawing.Color.White;
             this.btnclose.Location = new System.Drawing.Point(596, -1);
-            this.btnclose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnclose.Margin = new System.Windows.Forms.Padding(4);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(64, 39);
             this.btnclose.TabIndex = 10;
@@ -143,7 +146,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(523, -2);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(51, 43);
             this.button1.TabIndex = 11;
@@ -159,7 +162,7 @@
             this.button2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.DarkOrchid;
             this.button2.Location = new System.Drawing.Point(87, 416);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(311, 55);
             this.button2.TabIndex = 12;
@@ -167,27 +170,7 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::APPSGestionDesInstallationsGPS.Properties.Resources.KeyActivation2;
-            this.pictureBox1.Location = new System.Drawing.Point(445, 416);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::APPSGestionDesInstallationsGPS.Properties.Resources.img_forum04;
-            this.pictureBox2.Location = new System.Drawing.Point(-21, -2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(131, 113);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
+
             // 
             // frmConnexion
             // 
@@ -207,7 +190,7 @@
             this.Controls.Add(this.btnlogin);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmConnexion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "  ";

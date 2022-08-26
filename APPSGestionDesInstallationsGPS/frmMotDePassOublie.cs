@@ -38,12 +38,15 @@ namespace APPSGestionDesInstallationsGPS
                 requete = "update Mot_de_passe='" + txtnouveau.Text +"' from compte where question='" + cboquestion.Text +"' and reponse='"+ txtreponse.Text +"' and login='" + txtlogin.Text +"'";
                 a.ExecuteRequette(requete);
                 chargement();
-                MessageBox.Show("mot de passe changer");
-                
+                AccesDonnees.confirmation = "mot de passe changer";
+                frmConfirmation f = new frmConfirmation();
+                f.ShowDialog();
             }
             else
             {
-                MessageBox.Show("veuillez saisir une reponse correct");
+                AccesDonnees.erreur ="veuillez saisir une reponse correct" ;
+                frmerreur f = new frmerreur();
+                f.ShowDialog();
             }
 
         }
@@ -54,6 +57,7 @@ namespace APPSGestionDesInstallationsGPS
         }
         void chargement()
         {
+            
             txtlogin.Text = "";
             txtnouveau.Text = "";
             txtreponse.Text = "";

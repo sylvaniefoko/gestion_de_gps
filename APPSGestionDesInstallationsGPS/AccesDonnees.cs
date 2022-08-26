@@ -24,7 +24,8 @@ namespace APPSGestionDesInstallationsGPS
         public String ChaineConnexion;
         public MySqlCommand Commande;
         public MySqlConnection Cnx;
-
+        public  static string erreur;
+        public static string confirmation;
         public void Connexion()
         {
             Initialisation();

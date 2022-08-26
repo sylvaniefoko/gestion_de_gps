@@ -30,8 +30,6 @@ namespace APPSGestionDesInstallationsGPS
         }
         void chargement()
         {
-            txtmotpass.Text = "";
-            txtlogin.Text = "";
             btnlogin.Enabled = true;
         }
 
@@ -40,14 +38,17 @@ namespace APPSGestionDesInstallationsGPS
             requete = "SELECT id_compte FROM compte WHERE Mot_de_passe='" + a.CryptageMD5(txtmotpass.Text) + "' and  login='"+txtlogin.Text+"'";
             if (a.ResultatRequette1(requete) !=0) 
             {
-                frmMenu f = new frmMenu();
+                frmDashboard f = new frmDashboard();
                 f.ShowDialog();
-                MessageBox.Show("connexion reussi");     
-
+                //AccesDonnees.confirmation = "connexion reussi";
+               //frmConfirmation b = new frmConfirmation();
+               // b.ShowDialog();
             }
             else
             {
-                MessageBox.Show("saisissez un mot de passe ou un nom d'utilisteur correct");
+                AccesDonnees.erreur ="saisissez un mot de passe ou un nom d'utilisteur correct" ;
+                frmerreur f = new frmerreur();
+                f.ShowDialog();
             }
         }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -88,7 +89,8 @@ namespace APPSGestionDesInstallationsGPS
 
         private void txtmotpass_TextChanged(object sender, EventArgs e)
         {
-
+            
+            txtmotpass.UseSystemPasswordChar = true;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -100,6 +102,16 @@ namespace APPSGestionDesInstallationsGPS
         {
             frmCreationCompte f = new frmCreationCompte();
             f.ShowDialog();
+        }
+
+        private void txtlogin_Click(object sender, EventArgs e)
+        {
+            txtlogin.Text = "";
+        }
+
+        private void txtmotpass_Click(object sender, EventArgs e)
+        {
+            txtmotpass.Text = "";
         }
     }
 }

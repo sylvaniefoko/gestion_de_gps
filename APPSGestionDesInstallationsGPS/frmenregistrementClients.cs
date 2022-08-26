@@ -67,7 +67,9 @@ namespace APPSGestionDesInstallationsGPS
             requete = "UPDATE client SET Nom='" + txtNom.Text + "', Prenom='" + txtPrenom.Text + "',Adresse='" + txtAdresse.Text + "', Telephone='" + txtTelephone.Text + "', Ville='" + txtVille.Text + "' WHERE id_client='" + lematricule + "'";
             a.ExecuteRequette(requete);
             chargement();
-            MessageBox.Show("Modification effectué avec succes");
+            AccesDonnees.confirmation ="Modification effectué avec succes" ;
+            frmConfirmation f = new frmConfirmation();
+            f.ShowDialog();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -95,15 +97,18 @@ namespace APPSGestionDesInstallationsGPS
             requete = "INSERT INTO `client`(`Nom`, `Prenom`, `Adresse`, `Telephone`, `Ville`) VALUES ('" + txtNom.Text + "','" + txtPrenom.Text + "','" + txtAdresse.Text + "','" + txtTelephone.Text + "','" + txtVille.Text + "')";
             a.ExecuteRequette (requete);
             chargement();
-            MessageBox.Show ("enregistrement effectué avec succes");
-           
+            AccesDonnees.confirmation = "enregistrement effectué avec succes";
+            frmConfirmation f = new frmConfirmation();
+            f.ShowDialog();
         }
 
         private void btnSupprimmer_Click(object sender, EventArgs e)
         {
              requete = "DELETE FROM client WHERE id_client = '" + lematricule + "'";
             a.ExecuteRequette(requete);
-            MessageBox.Show("suppression effectué");
+            AccesDonnees.confirmation = "Suppression effectuée avec succes";
+            frmConfirmation f = new frmConfirmation();
+            f.ShowDialog();
             chargement();
         }
 
@@ -113,7 +118,7 @@ namespace APPSGestionDesInstallationsGPS
         }
          void chargement()
         {
-            requete = "select * from client ";
+            requete = "select * from client";
             a.ChargeTable(dataGridView1, requete);
             txtid_client.Text = "";
             txtNom.Text = "";
@@ -150,6 +155,18 @@ namespace APPSGestionDesInstallationsGPS
         private void btncommande_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtTelephone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                AccesDonnees.erreur = "veuillez saisir des chiffres";
+                frmerreur f = new frmerreur();
+                f.ShowDialog();
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

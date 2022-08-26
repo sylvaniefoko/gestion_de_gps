@@ -70,5 +70,17 @@ namespace APPSGestionDesInstallationsGPS
             btnmodifier.Enabled = true;
             btnSupprimer.Enabled = true;
         }
+
+        private void txtprix_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                AccesDonnees.erreur = "veuillez saisir des chiffres";
+                frmerreur f = new frmerreur();
+                f.ShowDialog();
+                e.Handled = true;
+                return;
+            }
+        }
     }
 }

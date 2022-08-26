@@ -57,6 +57,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dataGridView1.RowHeadersWidth = 100;
             this.dataGridView1.Size = new System.Drawing.Size(448, 211);
             this.dataGridView1.TabIndex = 1;
@@ -72,6 +73,7 @@
             // 
             // Nom
             // 
+            this.Nom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Nom.DataPropertyName = "nom";
             this.Nom.HeaderText = "Nom";
             this.Nom.Name = "Nom";
@@ -79,6 +81,7 @@
             // 
             // login
             // 
+            this.login.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.login.DataPropertyName = "login";
             this.login.HeaderText = "login";
             this.login.Name = "login";
@@ -86,6 +89,7 @@
             // 
             // Mot_de_passe
             // 
+            this.Mot_de_passe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Mot_de_passe.DataPropertyName = "Mot_de_passe";
             this.Mot_de_passe.HeaderText = "Mot_de_passe";
             this.Mot_de_passe.Name = "Mot_de_passe";
@@ -94,6 +98,7 @@
             // 
             // question
             // 
+            this.question.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.question.DataPropertyName = "question";
             this.question.HeaderText = "Question_de_securite";
             this.question.Name = "question";
@@ -102,6 +107,7 @@
             // 
             // reponse
             // 
+            this.reponse.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.reponse.DataPropertyName = "reponse";
             this.reponse.HeaderText = "reponse";
             this.reponse.Name = "reponse";
@@ -145,7 +151,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(559, 443);
+            this.ClientSize = new System.Drawing.Size(510, 443);
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.btnSupprimer);
             this.Controls.Add(this.dataGridView1);

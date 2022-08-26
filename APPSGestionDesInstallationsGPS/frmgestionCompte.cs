@@ -58,7 +58,9 @@ namespace APPSGestionDesInstallationsGPS
         {
             requete = "DELETE FROM compte WHERE id_compte = '" + lematricule + "'";
             a.ExecuteRequette(requete);           
-            MessageBox.Show("suppression effectué");
+            AccesDonnees.confirmation = "suppression effectué";
+            frmConfirmation f = new frmConfirmation();
+            f.ShowDialog();
             chargement();
         }
         private void label3_Click(object sender, EventArgs e)

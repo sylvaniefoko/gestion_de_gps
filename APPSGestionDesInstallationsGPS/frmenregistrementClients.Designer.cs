@@ -63,9 +63,10 @@
             this.Adresse,
             this.Telephone,
             this.Ville});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 15);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(751, 155);
+            this.dataGridView1.Size = new System.Drawing.Size(619, 191);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -79,30 +80,35 @@
             // 
             // Nom
             // 
+            this.Nom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Nom.DataPropertyName = "nom";
             this.Nom.HeaderText = "Nom";
             this.Nom.Name = "Nom";
             // 
             // Prenom
             // 
+            this.Prenom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Prenom.DataPropertyName = "prenom";
             this.Prenom.HeaderText = "Prenom";
             this.Prenom.Name = "Prenom";
             // 
             // Adresse
             // 
+            this.Adresse.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Adresse.DataPropertyName = "adresse";
             this.Adresse.HeaderText = "Adresse";
             this.Adresse.Name = "Adresse";
             // 
             // Telephone
             // 
+            this.Telephone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Telephone.DataPropertyName = "Telephone";
             this.Telephone.HeaderText = "Telephone";
             this.Telephone.Name = "Telephone";
             // 
             // Ville
             // 
+            this.Ville.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Ville.DataPropertyName = "ville";
             this.Ville.HeaderText = "Ville";
             this.Ville.Name = "Ville";
@@ -110,95 +116,118 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 216);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 266);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.Size = new System.Drawing.Size(49, 20);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Nom";
+            this.label2.Text = "Nom:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 252);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 310);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(72, 20);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Prenom";
+            this.label3.Text = "Prenom:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 287);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 353);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 13);
+            this.label4.Size = new System.Drawing.Size(76, 20);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Adresse";
+            this.label4.Text = "Adresse:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 324);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 399);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 13);
+            this.label5.Size = new System.Drawing.Size(91, 20);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Telephone";
+            this.label5.Text = "Telephone:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 372);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 456);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(26, 13);
+            this.label6.Size = new System.Drawing.Size(46, 20);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Ville";
+            this.label6.Text = "Ville:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(134, 209);
+            this.txtNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNom.Location = new System.Drawing.Point(179, 257);
+            this.txtNom.Margin = new System.Windows.Forms.Padding(4);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(181, 20);
+            this.txtNom.Size = new System.Drawing.Size(240, 27);
             this.txtNom.TabIndex = 8;
             this.txtNom.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtPrenom
             // 
-            this.txtPrenom.Location = new System.Drawing.Point(134, 245);
+            this.txtPrenom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrenom.Location = new System.Drawing.Point(179, 302);
+            this.txtPrenom.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrenom.Name = "txtPrenom";
-            this.txtPrenom.Size = new System.Drawing.Size(181, 20);
+            this.txtPrenom.Size = new System.Drawing.Size(240, 27);
             this.txtPrenom.TabIndex = 9;
             this.txtPrenom.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtAdresse
             // 
-            this.txtAdresse.Location = new System.Drawing.Point(134, 284);
+            this.txtAdresse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAdresse.Location = new System.Drawing.Point(179, 350);
+            this.txtAdresse.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdresse.Name = "txtAdresse";
-            this.txtAdresse.Size = new System.Drawing.Size(181, 20);
+            this.txtAdresse.Size = new System.Drawing.Size(240, 27);
             this.txtAdresse.TabIndex = 10;
             this.txtAdresse.TextChanged += new System.EventHandler(this.txtAdresse_TextChanged);
             // 
             // txtTelephone
             // 
-            this.txtTelephone.Location = new System.Drawing.Point(134, 324);
+            this.txtTelephone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelephone.Location = new System.Drawing.Point(179, 399);
+            this.txtTelephone.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelephone.Name = "txtTelephone";
-            this.txtTelephone.Size = new System.Drawing.Size(181, 20);
+            this.txtTelephone.Size = new System.Drawing.Size(240, 27);
             this.txtTelephone.TabIndex = 11;
             this.txtTelephone.TextChanged += new System.EventHandler(this.txtNumero_Telephone_TextChanged);
+            this.txtTelephone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelephone_KeyPress);
             // 
             // txtVille
             // 
-            this.txtVille.Location = new System.Drawing.Point(134, 365);
+            this.txtVille.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVille.Location = new System.Drawing.Point(179, 449);
+            this.txtVille.Margin = new System.Windows.Forms.Padding(4);
             this.txtVille.Name = "txtVille";
-            this.txtVille.Size = new System.Drawing.Size(181, 20);
+            this.txtVille.Size = new System.Drawing.Size(240, 27);
             this.txtVille.TabIndex = 12;
             // 
             // btnEnregistrer
             // 
-            this.btnEnregistrer.Location = new System.Drawing.Point(12, 442);
+            this.btnEnregistrer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnregistrer.Location = new System.Drawing.Point(16, 544);
+            this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnregistrer.Name = "btnEnregistrer";
-            this.btnEnregistrer.Size = new System.Drawing.Size(98, 25);
+            this.btnEnregistrer.Size = new System.Drawing.Size(131, 31);
             this.btnEnregistrer.TabIndex = 13;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = true;
@@ -206,9 +235,11 @@
             // 
             // btnmodifier
             // 
-            this.btnmodifier.Location = new System.Drawing.Point(134, 442);
+            this.btnmodifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmodifier.Location = new System.Drawing.Point(179, 544);
+            this.btnmodifier.Margin = new System.Windows.Forms.Padding(4);
             this.btnmodifier.Name = "btnmodifier";
-            this.btnmodifier.Size = new System.Drawing.Size(98, 25);
+            this.btnmodifier.Size = new System.Drawing.Size(131, 31);
             this.btnmodifier.TabIndex = 14;
             this.btnmodifier.Text = "Modifier";
             this.btnmodifier.UseVisualStyleBackColor = true;
@@ -216,9 +247,11 @@
             // 
             // btnSupprimer
             // 
-            this.btnSupprimer.Location = new System.Drawing.Point(255, 442);
+            this.btnSupprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupprimer.Location = new System.Drawing.Point(340, 544);
+            this.btnSupprimer.Margin = new System.Windows.Forms.Padding(4);
             this.btnSupprimer.Name = "btnSupprimer";
-            this.btnSupprimer.Size = new System.Drawing.Size(98, 25);
+            this.btnSupprimer.Size = new System.Drawing.Size(131, 31);
             this.btnSupprimer.TabIndex = 15;
             this.btnSupprimer.Text = "Supprimer";
             this.btnSupprimer.UseVisualStyleBackColor = true;
@@ -226,9 +259,11 @@
             // 
             // btnFermer
             // 
-            this.btnFermer.Location = new System.Drawing.Point(378, 442);
+            this.btnFermer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFermer.Location = new System.Drawing.Point(504, 544);
+            this.btnFermer.Margin = new System.Windows.Forms.Padding(4);
             this.btnFermer.Name = "btnFermer";
-            this.btnFermer.Size = new System.Drawing.Size(98, 25);
+            this.btnFermer.Size = new System.Drawing.Size(131, 31);
             this.btnFermer.TabIndex = 16;
             this.btnFermer.Text = "Fermer";
             this.btnFermer.UseVisualStyleBackColor = true;
@@ -236,19 +271,19 @@
             // 
             // txtid_client
             // 
-            this.txtid_client.Location = new System.Drawing.Point(134, 173);
+            this.txtid_client.Location = new System.Drawing.Point(179, 213);
             this.txtid_client.Margin = new System.Windows.Forms.Padding(1);
             this.txtid_client.Name = "txtid_client";
-            this.txtid_client.Size = new System.Drawing.Size(1, 20);
+            this.txtid_client.Size = new System.Drawing.Size(0, 22);
             this.txtid_client.TabIndex = 7;
             this.txtid_client.Visible = false;
             this.txtid_client.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // frmenregistrementClients
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 488);
+            this.ClientSize = new System.Drawing.Size(650, 601);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.btnSupprimer);
@@ -265,7 +300,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmenregistrementClients";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmenregistrementClients";
             this.Load += new System.EventHandler(this.frmenregistrementClients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -291,12 +328,12 @@
         private System.Windows.Forms.Button btnmodifier;
         private System.Windows.Forms.Button btnSupprimer;
         private System.Windows.Forms.Button btnFermer;
+        private System.Windows.Forms.TextBox txtid_client;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_client;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prenom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Adresse;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telephone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ville;
-        private System.Windows.Forms.TextBox txtid_client;
     }
 }

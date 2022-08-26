@@ -29,15 +29,19 @@ namespace APPSGestionDesInstallationsGPS
         {
           requete= "INSERT INTO `Cat_vehicule`( `categorie_vehicule`,`prix_installation`) VALUES ('" + txtcategorie.Text+"','"+txtPrix.Text+"')";
             a.ExecuteRequette(requete);
-            chargement();
-            MessageBox.Show("enregistrement effectué");
+            chargement();           
+            AccesDonnees.confirmation ="enregistrement effectué" ;
+            frmConfirmation f = new frmConfirmation();
+            f.ShowDialog();
         }
          private void btnmodifier_Click(object sender, EventArgs e)
         {
             requete = "UPDATE `Cat_vehicule` SET `categorie_vehicule`= '" + txtcategorie.Text + "',`prix_installation`= '" + txtPrix.Text + "' where id_catvehicule='"+lematricule+"'";
             a.ExecuteRequette(requete);
-            chargement();
-            MessageBox.Show("modification effectué avec succes");
+            chargement();           
+            AccesDonnees.confirmation=  "modification effectué avec succes";
+            frmConfirmation f = new frmConfirmation();
+            f.ShowDialog();
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -81,6 +85,23 @@ namespace APPSGestionDesInstallationsGPS
             requete = "delete from Cat_vehicule where id_catvehicule='" + lematricule+"'";
             a.ExecuteRequette(requete);
             chargement();            
+        }
+
+        private void txtPrix_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                AccesDonnees.erreur = "veuillez saisir des chiffres";
+                frmerreur f = new frmerreur();
+                f.ShowDialog();
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtcategorie_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

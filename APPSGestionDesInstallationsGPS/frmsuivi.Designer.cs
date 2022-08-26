@@ -45,10 +45,11 @@
             // 
             // btnSupprimer
             // 
-            this.btnSupprimer.Location = new System.Drawing.Point(443, 306);
-            this.btnSupprimer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSupprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupprimer.Location = new System.Drawing.Point(407, 306);
+            this.btnSupprimer.Margin = new System.Windows.Forms.Padding(4);
             this.btnSupprimer.Name = "btnSupprimer";
-            this.btnSupprimer.Size = new System.Drawing.Size(85, 31);
+            this.btnSupprimer.Size = new System.Drawing.Size(116, 31);
             this.btnSupprimer.TabIndex = 43;
             this.btnSupprimer.Text = "Supprimer";
             this.btnSupprimer.UseVisualStyleBackColor = true;
@@ -56,46 +57,54 @@
             // 
             // txtcategorie
             // 
+            this.txtcategorie.BackColor = System.Drawing.SystemColors.Info;
+            this.txtcategorie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcategorie.Location = new System.Drawing.Point(172, 192);
-            this.txtcategorie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtcategorie.Margin = new System.Windows.Forms.Padding(4);
             this.txtcategorie.Name = "txtcategorie";
-            this.txtcategorie.Size = new System.Drawing.Size(240, 22);
+            this.txtcategorie.Size = new System.Drawing.Size(221, 27);
             this.txtcategorie.TabIndex = 42;
             // 
             // txtprix
             // 
+            this.txtprix.BackColor = System.Drawing.SystemColors.Info;
+            this.txtprix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtprix.Location = new System.Drawing.Point(172, 236);
-            this.txtprix.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtprix.Margin = new System.Windows.Forms.Padding(4);
             this.txtprix.Name = "txtprix";
-            this.txtprix.Size = new System.Drawing.Size(240, 22);
+            this.txtprix.Size = new System.Drawing.Size(221, 27);
             this.txtprix.TabIndex = 41;
+            this.txtprix.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprix_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(11, 245);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 17);
+            this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 39;
-            this.label1.Text = "Prix_suivi";
+            this.label1.Text = "Prix_suivi:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 197);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(13, 199);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 17);
+            this.label2.Size = new System.Drawing.Size(107, 20);
             this.label2.TabIndex = 40;
-            this.label2.Text = "type de suivi";
+            this.label2.Text = "type de suivi:";
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.Location = new System.Drawing.Point(308, 306);
-            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnnuler.Location = new System.Drawing.Point(277, 306);
+            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(4);
             this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(85, 31);
+            this.btnAnnuler.Size = new System.Drawing.Size(99, 31);
             this.btnAnnuler.TabIndex = 38;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
@@ -103,8 +112,9 @@
             // 
             // btnmodifier
             // 
+            this.btnmodifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmodifier.Location = new System.Drawing.Point(139, 306);
-            this.btnmodifier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnmodifier.Margin = new System.Windows.Forms.Padding(4);
             this.btnmodifier.Name = "btnmodifier";
             this.btnmodifier.Size = new System.Drawing.Size(96, 31);
             this.btnmodifier.TabIndex = 37;
@@ -114,8 +124,9 @@
             // 
             // btnEnregistrer
             // 
+            this.btnEnregistrer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnregistrer.Location = new System.Drawing.Point(8, 306);
-            this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnregistrer.Name = "btnEnregistrer";
             this.btnEnregistrer.Size = new System.Drawing.Size(95, 31);
             this.btnEnregistrer.TabIndex = 36;
@@ -130,10 +141,10 @@
             this.id_suivi,
             this.prix_suivi,
             this.type_suivi});
-            this.dataGridView1.Location = new System.Drawing.Point(88, 15);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 15);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(325, 137);
+            this.dataGridView1.Size = new System.Drawing.Size(528, 137);
             this.dataGridView1.TabIndex = 44;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
@@ -146,12 +157,14 @@
             // 
             // prix_suivi
             // 
+            this.prix_suivi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.prix_suivi.DataPropertyName = "prix_suivi";
             this.prix_suivi.HeaderText = "Prix suivi";
             this.prix_suivi.Name = "prix_suivi";
             // 
             // type_suivi
             // 
+            this.type_suivi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.type_suivi.DataPropertyName = "type_suivi";
             this.type_suivi.HeaderText = "type suivi";
             this.type_suivi.Name = "type_suivi";
@@ -170,8 +183,9 @@
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.btnmodifier);
             this.Controls.Add(this.btnEnregistrer);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmsuivi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmsuivi";
             this.Load += new System.EventHandler(this.frmsuivi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
