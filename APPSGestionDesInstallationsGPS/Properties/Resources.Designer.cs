@@ -63,9 +63,39 @@ namespace APPSGestionDesInstallationsGPS.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap confirmer {
+            get {
+                object obj = ResourceManager.GetObject("confirmer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap confirmer1 {
+            get {
+                object obj = ResourceManager.GetObject("confirmer1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap connect2 {
             get {
                 object obj = ResourceManager.GetObject("connect2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap erreur {
+            get {
+                object obj = ResourceManager.GetObject("erreur", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace APPSGestionDesInstallationsGPS
 {
@@ -31,7 +32,7 @@ namespace APPSGestionDesInstallationsGPS
         private void btnmodifier_Click(object sender, EventArgs e)
         {
 
-            txtid_technicien.Text = (lematricule).ToString();
+           
             requete = "UPDATE technicien SET Nom='" + txtNom.Text + "', prenom='" + txtPrenom.Text + "', Adresse='" + txtAdresse.Text + "', num_tel='" + txtTelephone.Text + "' WHERE id_technicien='" + lematricule + "'";
             a.ExecuteRequette(requete);
             chargement();
@@ -68,8 +69,7 @@ namespace APPSGestionDesInstallationsGPS
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtid_technicien.Text = (lematricule).ToString();
+        {            
             lematricule = Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value);
             txtNom.Text = Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value);
             txtPrenom.Text = Convert.ToString(dataGridView1.CurrentRow.Cells[2].Value);

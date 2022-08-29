@@ -7,15 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace APPSGestionDesInstallationsGPS
 {
-    public partial class frmvehicule : Form
+    public partial class frmVehicule : Form
     {
         AccesDonnees a = new AccesDonnees();
         string requete="";
-        int  lematricule=0;
-        public frmvehicule()
+        int  lematricule=0;            
+        public frmVehicule()
         {
             InitializeComponent();
         }
@@ -92,7 +93,7 @@ namespace APPSGestionDesInstallationsGPS
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 AccesDonnees.erreur = "veuillez saisir des chiffres";
-                frmerreur f = new frmerreur();
+                frmErreur f = new frmErreur();
                 f.ShowDialog();
                 e.Handled = true;
                 return;

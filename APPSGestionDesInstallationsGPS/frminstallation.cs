@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace APPSGestionDesInstallationsGPS
 {
@@ -18,6 +19,7 @@ namespace APPSGestionDesInstallationsGPS
         int[] imei_gps = new int[100];
         int[] num_gps = new int[100];
         int[] idvehic = new int[100];
+
         public frminstallation()
         {
             InitializeComponent();
@@ -39,7 +41,7 @@ namespace APPSGestionDesInstallationsGPS
             a.ChargeCombo(cbotechnicien3, requete);
             a.ChargeCombo(cbotechnicien4, requete);
             a.ChargeCombo(cbotechnicien5, requete);
-            txtemail.Text = "";
+            txtimei.Text = "";
             txtnumerrogps.Text = "";
             cbotechnicien.Text = "";
             cbovehicule.Text ="";
@@ -70,7 +72,7 @@ namespace APPSGestionDesInstallationsGPS
             requete = "select num_gps from gps where id_vehicule='" + idvehicule + "'";
             txtnumerrogps.Text = (a.ResultatRequette1(requete)).ToString();
             requete = "select imei_gps from gps where id_vehicule='" + idvehicule + "'";
-            txtemail.Text = (a.ResultatRequette1(requete)).ToString();
+            txtimei.Text = (a.ResultatRequette1(requete)).ToString();
         }
         private void btnmodifier_Click(object sender, EventArgs e)
         {
@@ -213,14 +215,7 @@ namespace APPSGestionDesInstallationsGPS
 
         private void txtemail_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                AccesDonnees.erreur = "veuillez saisir des chiffres";
-                frmerreur f = new frmerreur();
-                f.ShowDialog();
-                e.Handled = true;
-                return;
-            }
+         
         }
 
         private void btnmodifer2_Click(object sender, EventArgs e)
@@ -229,17 +224,34 @@ namespace APPSGestionDesInstallationsGPS
             int idveh_gps = a.ResultatRequette1(requete);
             if (idveh_gps != 0)
             {
-                requete = "update gps set num_gps='" + txtnumerrogps.Text + "', imei_gps='" + txtemail.Text + "' where id_vehicule='" + idvehicule + "'";
+                requete = "update gps set num_gps='" + txtnumerrogps.Text + "', imei_gps='" + txtimei.Text + "' where id_vehicule='" + idvehicule + "'";
                 a.ExecuteRequette(requete);
             }
             else
             {
-                requete = "insert into gps ( num_gps, imei_gps,id_vehicule,id_installation) values('" + txtnumerrogps.Text + "','" + txtemail.Text + "','"+idvehicule+"','"+idinstallation+"') ";
+                requete = "insert into gps ( num_gps, imei_gps,id_vehicule,id_installation) values('" + txtnumerrogps.Text + "','" + txtimei.Text + "','"+idvehicule+"','"+idinstallation+"') ";
                 a.ExecuteRequette(requete);
             }
-            txtemail.Text = "";
+            txtimei.Text = "";
             txtnumerrogps.Text = "";
             cbovehicule.Text = "";
+        }
+
+        private void NOM_1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtimei_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                AccesDonnees.erreur = "veuillez saisir des chiffres";
+                frmerreur f = new frmerreur();
+                f.ShowDialog();
+                e.Handled = true;
+                return;
+            }
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -261,13 +273,13 @@ namespace APPSGestionDesInstallationsGPS
                 num = Convert.ToInt32(txtnumerrogps.Text);
                 num_gps[compteur_vehicule] = num;
             }
-            if (txtemail.Text =="")
+            if (txtimei.Text =="")
             {
                 imei_gps[compteur_vehicule] = 0;
             }
             else
             {
-                imei=Convert.ToInt32(txtemail.Text);
+                imei=Convert.ToInt32(txtimei.Text);
                 imei_gps[compteur_vehicule] = imei;
             }               
                 requete = "SELECT id_vehicule FROM vehicule , cat_vehicule WHERE vehicule.id_catvehicule = cat_vehicule.id_catvehicule AND vehicule.id_commande = '" + idcommande + "' and concat(categorie_vehicule,' ', marque_vehicule,' ', immatriculation_vehicule)= '" + cbovehicule.Text + "'";
@@ -275,7 +287,7 @@ namespace APPSGestionDesInstallationsGPS
                 idvehic[compteur_vehicule] = idvehicule;
                 compteur_vehicule++;
                 btnEnregistrer.Enabled = true;
-                txtemail.Text = "";
+                txtimei.Text = "";
                 txtnumerrogps.Text = "";
                 cbovehicule.Text = "";
         }

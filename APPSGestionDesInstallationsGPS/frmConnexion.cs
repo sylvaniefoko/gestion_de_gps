@@ -8,15 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Runtime.InteropServices;
+
 namespace APPSGestionDesInstallationsGPS
 {
+
     public partial class frmConnexion : Form
     {
+     
         AccesDonnees a = new AccesDonnees();
         string requete="";
-        public frmConnexion()
+            public frmConnexion()
         {
-            InitializeComponent();
+                InitializeComponent();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -33,11 +37,15 @@ namespace APPSGestionDesInstallationsGPS
             btnlogin.Enabled = true;
         }
 
+
         private void btnlogin_Click(object sender, EventArgs e)
         {
             requete = "SELECT id_compte FROM compte WHERE Mot_de_passe='" + a.CryptageMD5(txtmotpass.Text) + "' and  login='"+txtlogin.Text+"'";
             if (a.ResultatRequette1(requete) !=0) 
             {
+                int idcompte = a.ResultatRequette1(requete);
+                requete = "select login from compte where id_compte='" + idcompte + "'";
+               AccesDonnees.login = a.ResultatRequette(requete);        
                 frmDashboard f = new frmDashboard();
                 f.ShowDialog();
                 //AccesDonnees.confirmation = "connexion reussi";
@@ -47,7 +55,7 @@ namespace APPSGestionDesInstallationsGPS
             else
             {
                 AccesDonnees.erreur ="saisissez un mot de passe ou un nom d'utilisteur correct" ;
-                frmerreur f = new frmerreur();
+                frmErreur f = new frmErreur();
                 f.ShowDialog();
             }
         }

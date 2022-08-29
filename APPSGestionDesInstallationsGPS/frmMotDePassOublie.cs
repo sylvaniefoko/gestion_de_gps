@@ -8,15 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Runtime.InteropServices;
+
 namespace APPSGestionDesInstallationsGPS
 {
     public partial class frmMotDePassOublie : Form
     {
         AccesDonnees a = new AccesDonnees();
         string requete="";
-        public frmMotDePassOublie()
+            [DllImport("gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+            private static extern IntPtr CreateRoundRectRgn
+     (int nleftRect,
+     int nTopRect,
+     int nBottomRect,
+     int RightRect,
+     int WidhtEllipse,
+     int HeightEllipse);
+            public frmMotDePassOublie()
         {
-            InitializeComponent();
+                Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+                InitializeComponent();
         }
 
         private void label1_Click(object sender, EventArgs e)

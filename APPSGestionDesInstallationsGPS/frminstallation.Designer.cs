@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnFermer = new System.Windows.Forms.Button();
             this.btnannuler = new System.Windows.Forms.Button();
             this.btnmodifier = new System.Windows.Forms.Button();
@@ -43,6 +44,7 @@
             this.btnmodifier2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtimei = new System.Windows.Forms.TextBox();
             this.cbotechnicien = new System.Windows.Forms.ComboBox();
             this.NOM_1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -86,36 +88,36 @@
             // 
             // btnFermer
             // 
+            this.btnFermer.FlatAppearance.BorderSize = 0;
             this.btnFermer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFermer.Location = new System.Drawing.Point(925, 588);
-            this.btnFermer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFermer.Location = new System.Drawing.Point(756, 478);
             this.btnFermer.Name = "btnFermer";
-            this.btnFermer.Size = new System.Drawing.Size(131, 31);
-            this.btnFermer.TabIndex = 89;
+            this.btnFermer.Size = new System.Drawing.Size(98, 25);
+            this.btnFermer.TabIndex = 11;
             this.btnFermer.Text = "Fermer";
             this.btnFermer.UseVisualStyleBackColor = true;
             this.btnFermer.Click += new System.EventHandler(this.btnFermer_Click);
             // 
             // btnannuler
             // 
+            this.btnannuler.FlatAppearance.BorderSize = 0;
             this.btnannuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnannuler.Location = new System.Drawing.Point(628, 588);
-            this.btnannuler.Margin = new System.Windows.Forms.Padding(4);
+            this.btnannuler.Location = new System.Drawing.Point(454, 478);
             this.btnannuler.Name = "btnannuler";
-            this.btnannuler.Size = new System.Drawing.Size(131, 31);
-            this.btnannuler.TabIndex = 88;
+            this.btnannuler.Size = new System.Drawing.Size(98, 25);
+            this.btnannuler.TabIndex = 12;
             this.btnannuler.Text = "Annuler";
             this.btnannuler.UseVisualStyleBackColor = true;
             this.btnannuler.Click += new System.EventHandler(this.btnannuler_Click);
             // 
             // btnmodifier
             // 
+            this.btnmodifier.FlatAppearance.BorderSize = 0;
             this.btnmodifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmodifier.Location = new System.Drawing.Point(327, 588);
-            this.btnmodifier.Margin = new System.Windows.Forms.Padding(4);
+            this.btnmodifier.Location = new System.Drawing.Point(322, 478);
             this.btnmodifier.Name = "btnmodifier";
-            this.btnmodifier.Size = new System.Drawing.Size(131, 31);
-            this.btnmodifier.TabIndex = 87;
+            this.btnmodifier.Size = new System.Drawing.Size(89, 25);
+            this.btnmodifier.TabIndex = 13;
             this.btnmodifier.Text = "Modifier";
             this.btnmodifier.UseVisualStyleBackColor = true;
             this.btnmodifier.Click += new System.EventHandler(this.btnmodifier_Click);
@@ -123,23 +125,23 @@
             // dtpDate
             // 
             this.dtpDate.AccessibleDescription = "";
+            this.dtpDate.CalendarForeColor = System.Drawing.Color.CornflowerBlue;
             this.dtpDate.CustomFormat = "yyyy-MM-dd";
             this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDate.Location = new System.Drawing.Point(167, 283);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpDate.Location = new System.Drawing.Point(164, 230);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(289, 27);
-            this.dtpDate.TabIndex = 83;
+            this.dtpDate.Size = new System.Drawing.Size(291, 23);
+            this.dtpDate.TabIndex = 19;
             // 
             // btnEnregistrer
             // 
+            this.btnEnregistrer.FlatAppearance.BorderSize = 0;
             this.btnEnregistrer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnregistrer.Location = new System.Drawing.Point(24, 588);
-            this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEnregistrer.Location = new System.Drawing.Point(18, 478);
             this.btnEnregistrer.Name = "btnEnregistrer";
-            this.btnEnregistrer.Size = new System.Drawing.Size(131, 31);
-            this.btnEnregistrer.TabIndex = 82;
+            this.btnEnregistrer.Size = new System.Drawing.Size(98, 25);
+            this.btnEnregistrer.TabIndex = 14;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = true;
             this.btnEnregistrer.Click += new System.EventHandler(this.btnEnregistrer_Click);
@@ -148,31 +150,28 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 281);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(15, 236);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 20);
+            this.label4.Size = new System.Drawing.Size(139, 17);
             this.label4.TabIndex = 77;
-            this.label4.Text = "Date installation:";
+            this.label4.Text = "Date de l\'installation:";
             // 
             // txtemail
             // 
             this.txtemail.BackColor = System.Drawing.SystemColors.Info;
-            this.txtemail.Location = new System.Drawing.Point(151, 145);
-            this.txtemail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtemail.Location = new System.Drawing.Point(770, 212);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(289, 27);
-            this.txtemail.TabIndex = 90;
+            this.txtemail.Size = new System.Drawing.Size(286, 24);
+            this.txtemail.TabIndex = 17;
             this.txtemail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txtemail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtemail_KeyPress);
             // 
             // txtnumerrogps
             // 
             this.txtnumerrogps.BackColor = System.Drawing.SystemColors.Info;
-            this.txtnumerrogps.Location = new System.Drawing.Point(151, 101);
-            this.txtnumerrogps.Margin = new System.Windows.Forms.Padding(4);
+            this.txtnumerrogps.Location = new System.Drawing.Point(146, 78);
             this.txtnumerrogps.Name = "txtnumerrogps";
-            this.txtnumerrogps.Size = new System.Drawing.Size(289, 27);
+            this.txtnumerrogps.Size = new System.Drawing.Size(291, 24);
             this.txtnumerrogps.TabIndex = 92;
             this.txtnumerrogps.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnumerrogps_KeyPress);
             // 
@@ -185,47 +184,44 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtemail);
+            this.groupBox1.Controls.Add(this.txtimei);
             this.groupBox1.Controls.Add(this.txtnumerrogps);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(16, 329);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(18, 262);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(459, 228);
+            this.groupBox1.Size = new System.Drawing.Size(443, 185);
             this.groupBox1.TabIndex = 93;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Enregistrer les GPS";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // cbovehicule
             // 
             this.cbovehicule.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbovehicule.FormattingEnabled = true;
-            this.cbovehicule.Location = new System.Drawing.Point(151, 53);
-            this.cbovehicule.Margin = new System.Windows.Forms.Padding(4);
+            this.cbovehicule.Location = new System.Drawing.Point(146, 39);
             this.cbovehicule.Name = "cbovehicule";
-            this.cbovehicule.Size = new System.Drawing.Size(289, 28);
-            this.cbovehicule.TabIndex = 101;
+            this.cbovehicule.Size = new System.Drawing.Size(291, 26);
+            this.cbovehicule.TabIndex = 18;
             this.cbovehicule.SelectedIndexChanged += new System.EventHandler(this.cbovehicule_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 59);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(6, 48);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 20);
+            this.label3.Size = new System.Drawing.Size(66, 17);
             this.label3.TabIndex = 96;
-            this.label3.Text = "Vehicule:";
+            this.label3.Text = "Véhicule:";
             // 
             // btnok
             // 
             this.btnok.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnok.Location = new System.Drawing.Point(12, 191);
-            this.btnok.Margin = new System.Windows.Forms.Padding(4);
+            this.btnok.Location = new System.Drawing.Point(9, 155);
             this.btnok.Name = "btnok";
-            this.btnok.Size = new System.Drawing.Size(56, 31);
-            this.btnok.TabIndex = 95;
+            this.btnok.Size = new System.Drawing.Size(42, 25);
+            this.btnok.TabIndex = 15;
             this.btnok.Text = "OK";
             this.btnok.UseVisualStyleBackColor = true;
             this.btnok.Click += new System.EventHandler(this.btnok_Click);
@@ -233,11 +229,10 @@
             // btnmodifier2
             // 
             this.btnmodifier2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmodifier2.Location = new System.Drawing.Point(322, 191);
-            this.btnmodifier2.Margin = new System.Windows.Forms.Padding(4);
+            this.btnmodifier2.Location = new System.Drawing.Point(309, 155);
             this.btnmodifier2.Name = "btnmodifier2";
-            this.btnmodifier2.Size = new System.Drawing.Size(120, 31);
-            this.btnmodifier2.TabIndex = 95;
+            this.btnmodifier2.Size = new System.Drawing.Size(90, 25);
+            this.btnmodifier2.TabIndex = 16;
             this.btnmodifier2.Text = "Modifier";
             this.btnmodifier2.UseVisualStyleBackColor = true;
             this.btnmodifier2.Click += new System.EventHandler(this.btnmodifer2_Click);
@@ -246,23 +241,30 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 105);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(3, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 20);
+            this.label2.Size = new System.Drawing.Size(119, 17);
             this.label2.TabIndex = 94;
-            this.label2.Text = "Numero GPS:";
+            this.label2.Text = "Numéro du  GPS:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 150);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 122);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.Size = new System.Drawing.Size(88, 17);
             this.label1.TabIndex = 93;
-            this.label1.Text = "IMEI Gps:";
+            this.label1.Text = "IMEI du Gps:";
+            // 
+            // txtimei
+            // 
+            this.txtimei.BackColor = System.Drawing.SystemColors.Info;
+            this.txtimei.Location = new System.Drawing.Point(146, 115);
+            this.txtimei.Name = "txtimei";
+            this.txtimei.Size = new System.Drawing.Size(291, 24);
+            this.txtimei.TabIndex = 92;
+            this.txtimei.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtimei_KeyPress);
             // 
             // cbotechnicien
             // 
@@ -274,22 +276,21 @@
             "Stand By",
             "Terminer",
             "Non Fait"});
-            this.cbotechnicien.Location = new System.Drawing.Point(779, 332);
-            this.cbotechnicien.Margin = new System.Windows.Forms.Padding(4);
+            this.cbotechnicien.Location = new System.Drawing.Point(719, 269);
             this.cbotechnicien.Name = "cbotechnicien";
-            this.cbotechnicien.Size = new System.Drawing.Size(363, 28);
-            this.cbotechnicien.TabIndex = 100;
+            this.cbotechnicien.Size = new System.Drawing.Size(286, 25);
+            this.cbotechnicien.TabIndex = 6;
             // 
             // NOM_1
             // 
             this.NOM_1.AutoSize = true;
             this.NOM_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NOM_1.Location = new System.Drawing.Point(585, 340);
-            this.NOM_1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NOM_1.Location = new System.Drawing.Point(499, 277);
             this.NOM_1.Name = "NOM_1";
-            this.NOM_1.Size = new System.Drawing.Size(167, 20);
-            this.NOM_1.TabIndex = 96;
+            this.NOM_1.Size = new System.Drawing.Size(141, 17);
+            this.NOM_1.TabIndex = 22;
             this.NOM_1.Text = "Nom du technicien 1:";
+            this.NOM_1.Click += new System.EventHandler(this.NOM_1_Click);
             // 
             // groupBox2
             // 
@@ -299,25 +300,22 @@
             this.groupBox2.Controls.Add(this.btntrier);
             this.groupBox2.Controls.Add(this.dataGridView2);
             this.groupBox2.Controls.Add(this.dtpdate2);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(615, 15);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(489, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(541, 286);
-            this.groupBox2.TabIndex = 94;
+            this.groupBox2.Size = new System.Drawing.Size(530, 241);
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Selctionner une commande";
+            this.groupBox2.Text = "Sélectionner une commande";
             // 
             // date
             // 
             this.date.AutoSize = true;
             this.date.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date.Location = new System.Drawing.Point(156, 256);
-            this.date.Margin = new System.Windows.Forms.Padding(4);
+            this.date.Location = new System.Drawing.Point(111, 214);
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(67, 24);
-            this.date.TabIndex = 104;
+            this.date.Size = new System.Drawing.Size(57, 21);
+            this.date.TabIndex = 4;
             this.date.Text = "Date";
             this.date.UseVisualStyleBackColor = true;
             this.date.CheckedChanged += new System.EventHandler(this.date_CheckedChanged);
@@ -326,12 +324,11 @@
             // 
             this.nom.AutoSize = true;
             this.nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nom.Location = new System.Drawing.Point(156, 222);
-            this.nom.Margin = new System.Windows.Forms.Padding(4);
+            this.nom.Location = new System.Drawing.Point(111, 185);
             this.nom.Name = "nom";
-            this.nom.Size = new System.Drawing.Size(111, 24);
-            this.nom.TabIndex = 103;
-            this.nom.Text = "Nom client";
+            this.nom.Size = new System.Drawing.Size(113, 21);
+            this.nom.TabIndex = 2;
+            this.nom.Text = "Nom du client";
             this.nom.UseVisualStyleBackColor = true;
             this.nom.CheckedChanged += new System.EventHandler(this.nom_CheckedChanged);
             // 
@@ -345,21 +342,19 @@
             "Stand By",
             "Terminer",
             "Non Fait"});
-            this.cboclient.Location = new System.Drawing.Point(302, 215);
-            this.cboclient.Margin = new System.Windows.Forms.Padding(4);
+            this.cboclient.Location = new System.Drawing.Point(230, 179);
             this.cboclient.Name = "cboclient";
-            this.cboclient.Size = new System.Drawing.Size(216, 28);
-            this.cboclient.TabIndex = 99;
+            this.cboclient.Size = new System.Drawing.Size(286, 25);
+            this.cboclient.TabIndex = 3;
             this.cboclient.SelectedIndexChanged += new System.EventHandler(this.cboclient_SelectedIndexChanged);
             // 
             // btntrier
             // 
             this.btntrier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntrier.Location = new System.Drawing.Point(13, 222);
-            this.btntrier.Margin = new System.Windows.Forms.Padding(4);
+            this.btntrier.Location = new System.Drawing.Point(6, 179);
             this.btntrier.Name = "btntrier";
-            this.btntrier.Size = new System.Drawing.Size(103, 31);
-            this.btntrier.TabIndex = 100;
+            this.btntrier.Size = new System.Drawing.Size(88, 31);
+            this.btntrier.TabIndex = 1;
             this.btntrier.Text = "Trier par";
             this.btntrier.UseVisualStyleBackColor = true;
             this.btntrier.Click += new System.EventHandler(this.btntrier_Click);
@@ -374,11 +369,10 @@
             this.date_commande,
             this.lieu,
             this.quantite});
-            this.dataGridView2.Location = new System.Drawing.Point(17, 23);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView2.Location = new System.Drawing.Point(13, 19);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(507, 185);
-            this.dataGridView2.TabIndex = 58;
+            this.dataGridView2.Size = new System.Drawing.Size(503, 150);
+            this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             // 
@@ -430,21 +424,20 @@
             this.dtpdate2.CustomFormat = "yyyy-MM-dd";
             this.dtpdate2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpdate2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpdate2.Location = new System.Drawing.Point(302, 254);
-            this.dtpdate2.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpdate2.Location = new System.Drawing.Point(230, 210);
             this.dtpdate2.Name = "dtpdate2";
-            this.dtpdate2.Size = new System.Drawing.Size(216, 27);
-            this.dtpdate2.TabIndex = 83;
+            this.dtpdate2.Size = new System.Drawing.Size(286, 23);
+            this.dtpdate2.TabIndex = 5;
             this.dtpdate2.ValueChanged += new System.EventHandler(this.dtpdate2_ValueChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(13, 244);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(15, 199);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 20);
+            this.label7.Size = new System.Drawing.Size(47, 17);
             this.label7.TabIndex = 98;
             this.label7.Text = "statut:";
             // 
@@ -458,14 +451,21 @@
             "Stand By",
             "Terminer",
             "Non Fait"});
-            this.cbostatut.Location = new System.Drawing.Point(167, 238);
-            this.cbostatut.Margin = new System.Windows.Forms.Padding(4);
+            this.cbostatut.Location = new System.Drawing.Point(164, 193);
             this.cbostatut.Name = "cbostatut";
-            this.cbostatut.Size = new System.Drawing.Size(289, 30);
-            this.cbostatut.TabIndex = 99;
+            this.cbostatut.Size = new System.Drawing.Size(291, 25);
+            this.cbostatut.TabIndex = 20;
             // 
             // dataGridView1
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_installation,
@@ -477,11 +477,10 @@
             this.id_technicien5,
             this.statut,
             this.date_installation});
-            this.dataGridView1.Location = new System.Drawing.Point(17, 25);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 20);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(441, 208);
-            this.dataGridView1.TabIndex = 95;
+            this.dataGridView1.Size = new System.Drawing.Size(442, 169);
+            this.dataGridView1.TabIndex = 21;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
@@ -558,21 +557,19 @@
             "Stand By",
             "Terminer",
             "Non Fait"});
-            this.cbotechnicien2.Location = new System.Drawing.Point(779, 375);
-            this.cbotechnicien2.Margin = new System.Windows.Forms.Padding(4);
+            this.cbotechnicien2.Location = new System.Drawing.Point(719, 307);
             this.cbotechnicien2.Name = "cbotechnicien2";
-            this.cbotechnicien2.Size = new System.Drawing.Size(363, 28);
-            this.cbotechnicien2.TabIndex = 102;
+            this.cbotechnicien2.Size = new System.Drawing.Size(286, 25);
+            this.cbotechnicien2.TabIndex = 7;
             // 
             // Nom_2
             // 
             this.Nom_2.AutoSize = true;
             this.Nom_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nom_2.Location = new System.Drawing.Point(586, 383);
-            this.Nom_2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Nom_2.Location = new System.Drawing.Point(499, 318);
             this.Nom_2.Name = "Nom_2";
-            this.Nom_2.Size = new System.Drawing.Size(167, 20);
-            this.Nom_2.TabIndex = 101;
+            this.Nom_2.Size = new System.Drawing.Size(141, 17);
+            this.Nom_2.TabIndex = 23;
             this.Nom_2.Text = "Nom du technicien 2:";
             // 
             // cbotechnicien3
@@ -585,32 +582,29 @@
             "Stand By",
             "Terminer",
             "Non Fait"});
-            this.cbotechnicien3.Location = new System.Drawing.Point(779, 420);
-            this.cbotechnicien3.Margin = new System.Windows.Forms.Padding(4);
+            this.cbotechnicien3.Location = new System.Drawing.Point(719, 347);
             this.cbotechnicien3.Name = "cbotechnicien3";
-            this.cbotechnicien3.Size = new System.Drawing.Size(363, 28);
-            this.cbotechnicien3.TabIndex = 104;
+            this.cbotechnicien3.Size = new System.Drawing.Size(286, 25);
+            this.cbotechnicien3.TabIndex = 8;
             // 
             // Nom_3
             // 
             this.Nom_3.AutoSize = true;
             this.Nom_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nom_3.Location = new System.Drawing.Point(586, 426);
-            this.Nom_3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Nom_3.Location = new System.Drawing.Point(499, 355);
             this.Nom_3.Name = "Nom_3";
-            this.Nom_3.Size = new System.Drawing.Size(167, 20);
-            this.Nom_3.TabIndex = 103;
+            this.Nom_3.Size = new System.Drawing.Size(141, 17);
+            this.Nom_3.TabIndex = 24;
             this.Nom_3.Text = "Nom du technicien 3:";
             // 
             // Nom_4
             // 
             this.Nom_4.AutoSize = true;
             this.Nom_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nom_4.Location = new System.Drawing.Point(586, 478);
-            this.Nom_4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Nom_4.Location = new System.Drawing.Point(499, 389);
             this.Nom_4.Name = "Nom_4";
-            this.Nom_4.Size = new System.Drawing.Size(167, 20);
-            this.Nom_4.TabIndex = 103;
+            this.Nom_4.Size = new System.Drawing.Size(141, 17);
+            this.Nom_4.TabIndex = 25;
             this.Nom_4.Text = "Nom du technicien 4:";
             // 
             // cbotechnicien4
@@ -623,21 +617,19 @@
             "Stand By",
             "Terminer",
             "Non Fait"});
-            this.cbotechnicien4.Location = new System.Drawing.Point(776, 473);
-            this.cbotechnicien4.Margin = new System.Windows.Forms.Padding(4);
+            this.cbotechnicien4.Location = new System.Drawing.Point(719, 381);
             this.cbotechnicien4.Name = "cbotechnicien4";
-            this.cbotechnicien4.Size = new System.Drawing.Size(363, 28);
-            this.cbotechnicien4.TabIndex = 104;
+            this.cbotechnicien4.Size = new System.Drawing.Size(286, 25);
+            this.cbotechnicien4.TabIndex = 9;
             // 
             // Nom_5
             // 
             this.Nom_5.AutoSize = true;
             this.Nom_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nom_5.Location = new System.Drawing.Point(586, 531);
-            this.Nom_5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Nom_5.Location = new System.Drawing.Point(499, 430);
             this.Nom_5.Name = "Nom_5";
-            this.Nom_5.Size = new System.Drawing.Size(167, 20);
-            this.Nom_5.TabIndex = 103;
+            this.Nom_5.Size = new System.Drawing.Size(141, 17);
+            this.Nom_5.TabIndex = 26;
             this.Nom_5.Text = "Nom du technicien 5:";
             // 
             // cbotechnicien5
@@ -650,17 +642,17 @@
             "Stand By",
             "Terminer",
             "Non Fait"});
-            this.cbotechnicien5.Location = new System.Drawing.Point(779, 524);
-            this.cbotechnicien5.Margin = new System.Windows.Forms.Padding(4);
+            this.cbotechnicien5.Location = new System.Drawing.Point(719, 422);
             this.cbotechnicien5.Name = "cbotechnicien5";
-            this.cbotechnicien5.Size = new System.Drawing.Size(363, 28);
-            this.cbotechnicien5.TabIndex = 104;
+            this.cbotechnicien5.Size = new System.Drawing.Size(286, 25);
+            this.cbotechnicien5.TabIndex = 10;
             // 
             // frminstallation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1168, 645);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1031, 522);
             this.Controls.Add(this.cbotechnicien5);
             this.Controls.Add(this.Nom_5);
             this.Controls.Add(this.cbotechnicien4);
@@ -682,10 +674,9 @@
             this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.btnmodifier);
             this.Controls.Add(this.btnEnregistrer);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frminstallation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frminstallation";
+            this.Text = "Enregistrement des installations";
             this.Load += new System.EventHandler(this.frminstallation_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -749,5 +740,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn lieu;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantite;
         private System.Windows.Forms.DateTimePicker dtpdate2;
+        private System.Windows.Forms.TextBox txtimei;
     }
 }

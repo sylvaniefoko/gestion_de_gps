@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSupprimer = new System.Windows.Forms.Button();
             this.txtcategorie = new System.Windows.Forms.TextBox();
             this.txtprix = new System.Windows.Forms.TextBox();
@@ -46,10 +47,9 @@
             // btnSupprimer
             // 
             this.btnSupprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSupprimer.Location = new System.Drawing.Point(407, 306);
-            this.btnSupprimer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSupprimer.Location = new System.Drawing.Point(294, 235);
             this.btnSupprimer.Name = "btnSupprimer";
-            this.btnSupprimer.Size = new System.Drawing.Size(116, 31);
+            this.btnSupprimer.Size = new System.Drawing.Size(107, 25);
             this.btnSupprimer.TabIndex = 43;
             this.btnSupprimer.Text = "Supprimer";
             this.btnSupprimer.UseVisualStyleBackColor = true;
@@ -59,20 +59,18 @@
             // 
             this.txtcategorie.BackColor = System.Drawing.SystemColors.Info;
             this.txtcategorie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcategorie.Location = new System.Drawing.Point(172, 192);
-            this.txtcategorie.Margin = new System.Windows.Forms.Padding(4);
+            this.txtcategorie.Location = new System.Drawing.Point(250, 157);
             this.txtcategorie.Name = "txtcategorie";
-            this.txtcategorie.Size = new System.Drawing.Size(221, 27);
+            this.txtcategorie.Size = new System.Drawing.Size(286, 23);
             this.txtcategorie.TabIndex = 42;
             // 
             // txtprix
             // 
             this.txtprix.BackColor = System.Drawing.SystemColors.Info;
             this.txtprix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprix.Location = new System.Drawing.Point(172, 236);
-            this.txtprix.Margin = new System.Windows.Forms.Padding(4);
+            this.txtprix.Location = new System.Drawing.Point(250, 193);
             this.txtprix.Name = "txtprix";
-            this.txtprix.Size = new System.Drawing.Size(221, 27);
+            this.txtprix.Size = new System.Drawing.Size(286, 23);
             this.txtprix.TabIndex = 41;
             this.txtprix.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprix_KeyPress);
             // 
@@ -80,31 +78,28 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 245);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 199);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 20);
+            this.label1.Size = new System.Drawing.Size(87, 17);
             this.label1.TabIndex = 39;
-            this.label1.Text = "Prix_suivi:";
+            this.label1.Text = "Prix du suivi:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 199);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(10, 162);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 20);
+            this.label2.Size = new System.Drawing.Size(91, 17);
             this.label2.TabIndex = 40;
             this.label2.Text = "type de suivi:";
             // 
             // btnAnnuler
             // 
             this.btnAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnnuler.Location = new System.Drawing.Point(277, 306);
-            this.btnAnnuler.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAnnuler.Location = new System.Drawing.Point(443, 235);
             this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(99, 31);
+            this.btnAnnuler.Size = new System.Drawing.Size(93, 25);
             this.btnAnnuler.TabIndex = 38;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
@@ -113,10 +108,9 @@
             // btnmodifier
             // 
             this.btnmodifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmodifier.Location = new System.Drawing.Point(139, 306);
-            this.btnmodifier.Margin = new System.Windows.Forms.Padding(4);
+            this.btnmodifier.Location = new System.Drawing.Point(161, 235);
             this.btnmodifier.Name = "btnmodifier";
-            this.btnmodifier.Size = new System.Drawing.Size(96, 31);
+            this.btnmodifier.Size = new System.Drawing.Size(90, 25);
             this.btnmodifier.TabIndex = 37;
             this.btnmodifier.Text = "Modifier";
             this.btnmodifier.UseVisualStyleBackColor = true;
@@ -125,10 +119,9 @@
             // btnEnregistrer
             // 
             this.btnEnregistrer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnregistrer.Location = new System.Drawing.Point(8, 306);
-            this.btnEnregistrer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEnregistrer.Location = new System.Drawing.Point(9, 235);
             this.btnEnregistrer.Name = "btnEnregistrer";
-            this.btnEnregistrer.Size = new System.Drawing.Size(95, 31);
+            this.btnEnregistrer.Size = new System.Drawing.Size(113, 25);
             this.btnEnregistrer.TabIndex = 36;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = true;
@@ -136,15 +129,22 @@
             // 
             // dataGridView1
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_suivi,
             this.prix_suivi,
             this.type_suivi});
-            this.dataGridView1.Location = new System.Drawing.Point(14, 15);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(528, 137);
+            this.dataGridView1.Size = new System.Drawing.Size(526, 111);
             this.dataGridView1.TabIndex = 44;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
@@ -171,9 +171,10 @@
             // 
             // frmsuivi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 382);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(546, 279);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSupprimer);
             this.Controls.Add(this.txtcategorie);
@@ -183,10 +184,9 @@
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.btnmodifier);
             this.Controls.Add(this.btnEnregistrer);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmsuivi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmsuivi";
+            this.Text = "Enregistrement des  suivis ";
             this.Load += new System.EventHandler(this.frmsuivi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Controls;
+using System.Runtime.InteropServices;
+
 
 namespace APPSGestionDesInstallationsGPS
 {
@@ -33,9 +35,10 @@ namespace APPSGestionDesInstallationsGPS
         int compteur_vehicule = 0;
         string[] categorievehicule = new string[100];
         int compteur_veh = 0;
-        public frmCommande()
+            public frmCommande()
         {
-            InitializeComponent();
+               
+                InitializeComponent();
         }
         public static void uniquement_entier(System.Windows.Forms.KeyPressEventArgs e)
         {
@@ -303,6 +306,16 @@ namespace APPSGestionDesInstallationsGPS
                 }
                 
             }
+        }
+
+        private void txtprix_reduit_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtremise_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void dtpDate_ValueChanged_1(object sender, EventArgs e)

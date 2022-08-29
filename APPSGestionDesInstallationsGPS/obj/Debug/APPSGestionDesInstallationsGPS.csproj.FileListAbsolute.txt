@@ -73,7 +73,6 @@ C:\Users\Saction\Documents\Visual Studio 2015\Projects\APPSGestionDesInstallatio
 C:\Users\Saction\Documents\Visual Studio 2015\Projects\APPSGestionDesInstallationsGPS\APPSGestionDesInstallationsGPS\obj\Debug\APPSGestionDesInstallationsGPS.frmerreur.resources
 C:\Users\Saction\Documents\Visual Studio 2015\Projects\APPSGestionDesInstallationsGPS\APPSGestionDesInstallationsGPS\obj\Debug\APPSGestionDesInstallationsGPS.frmgestionCompte.resources
 C:\Users\Saction\Documents\Visual Studio 2015\Projects\APPSGestionDesInstallationsGPS\APPSGestionDesInstallationsGPS\obj\Debug\APPSGestionDesInstallationsGPS.frminstallation.resources
-C:\Users\Saction\Documents\Visual Studio 2015\Projects\APPSGestionDesInstallationsGPS\APPSGestionDesInstallationsGPS\obj\Debug\APPSGestionDesInstallationsGPS.frmMenu.resources
 C:\Users\Saction\Documents\Visual Studio 2015\Projects\APPSGestionDesInstallationsGPS\APPSGestionDesInstallationsGPS\obj\Debug\APPSGestionDesInstallationsGPS.frmMotDePassOublie.resources
 C:\Users\Saction\Documents\Visual Studio 2015\Projects\APPSGestionDesInstallationsGPS\APPSGestionDesInstallationsGPS\obj\Debug\APPSGestionDesInstallationsGPS.frmsuivi.resources
 C:\Users\Saction\Documents\Visual Studio 2015\Projects\APPSGestionDesInstallationsGPS\APPSGestionDesInstallationsGPS\obj\Debug\APPSGestionDesInstallationsGPS.frmvehicule.resources

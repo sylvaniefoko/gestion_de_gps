@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+
+
 
 namespace APPSGestionDesInstallationsGPS
 {
@@ -15,9 +18,9 @@ namespace APPSGestionDesInstallationsGPS
         AccesDonnees a = new AccesDonnees();
         string requete = "";
         int suivi = 0;
-        public frmsuivi()
+            public frmsuivi()
         {
-            InitializeComponent();
+                InitializeComponent();
         }
 
         private void btnEnregistrer_Click(object sender, EventArgs e)

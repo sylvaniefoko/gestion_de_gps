@@ -13,6 +13,8 @@ namespace APPSGestionDesInstallationsGPS
 {
     public partial class frmDashboard : Form
     {
+        AccesDonnees a = new AccesDonnees();
+        string requete = "";
         [DllImport("gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
           (int nleftRect,
@@ -56,7 +58,8 @@ namespace APPSGestionDesInstallationsGPS
             pnlcommand.Top = btng_client.Top;
             pnlcommand.Left = btng_client.Left;
             btng_client.BackColor = Color.FromArgb(46, 51, 73);
-      
+            frmEnregistrementClients f = new frmEnregistrementClients();
+            f.ShowDialog();
         }
 
         private void btng_parametre_Click(object sender, EventArgs e)
@@ -144,6 +147,16 @@ namespace APPSGestionDesInstallationsGPS
         private void panel16_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+            Nom_utilisateur.Text = AccesDonnees.login;
+        }
+
+        private void btnfermerClick(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

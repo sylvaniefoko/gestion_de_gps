@@ -8,15 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Runtime.InteropServices;
 namespace APPSGestionDesInstallationsGPS
 {
     public partial class frmCreationCompte : Form
     {
         AccesDonnees a = new AccesDonnees();
         string requete;
-        public frmCreationCompte()
+
+
+            public frmCreationCompte()
         {
-            InitializeComponent();
+                InitializeComponent();
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -25,6 +25,7 @@ namespace APPSGestionDesInstallationsGPS
         public MySqlCommand Commande;
         public MySqlConnection Cnx;
         public  static string erreur;
+        public static string login;
         public static string confirmation;
         public void Connexion()
         {
@@ -44,7 +45,7 @@ namespace APPSGestionDesInstallationsGPS
         {
             String chaine;
             //chaine = "SERVER = 127.0.0.1; uid = ismael; pwd = ismael; database = bd_tontine;";
-            chaine = "SERVER=localhost;uid=root; pwd=; database=gestion_des_installations;command timeout=20000";
+            chaine = "SERVER=localhost;uid=root; pwd=; database=gestions_des_installations;command timeout=20000";
 
             ChaineConnexion = chaine;
 

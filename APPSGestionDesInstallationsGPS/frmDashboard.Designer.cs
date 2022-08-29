@@ -28,22 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.panel14 = new System.Windows.Forms.Panel();
             this.pnlcommand = new System.Windows.Forms.Panel();
             this.btng_parametre = new System.Windows.Forms.Button();
@@ -54,20 +53,15 @@
             this.btng_client = new System.Windows.Forms.Button();
             this.btndashboard = new System.Windows.Forms.Button();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.Nom_utilisateur = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnfrermer = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.pnlmenu = new System.Windows.Forms.Panel();
-            this.tlpnltitre_graph = new System.Windows.Forms.TableLayoutPanel();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel23 = new System.Windows.Forms.Panel();
+            this.pnl_dubas = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
+            this.chart7 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tlpnlgraph = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -88,18 +82,13 @@
             this.pnlclient = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
-            this.chart7 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.pnl_dubas = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel14.SuspendLayout();
             this.panel21.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel15.SuspendLayout();
             this.pnlmenu.SuspendLayout();
-            this.tlpnltitre_graph.SuspendLayout();
-            this.panel22.SuspendLayout();
-            this.panel23.SuspendLayout();
-            this.panel24.SuspendLayout();
+            this.pnl_dubas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart7)).BeginInit();
             this.tlpnlgraph.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
@@ -116,8 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.pnlclient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart7)).BeginInit();
-            this.pnl_dubas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel14
@@ -254,38 +242,28 @@
             // panel21
             // 
             this.panel21.Controls.Add(this.pictureBox2);
-            this.panel21.Controls.Add(this.label16);
+            this.panel21.Controls.Add(this.Nom_utilisateur);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel21.Location = new System.Drawing.Point(0, 0);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(298, 138);
             this.panel21.TabIndex = 0;
             // 
-            // pictureBox2
+            // Nom_utilisateur
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(73, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(116, 77);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(74, 102);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(115, 18);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "Nom d\'utlisateur";
-            this.label16.Click += new System.EventHandler(this.label11_Click);
+            this.Nom_utilisateur.AutoSize = true;
+            this.Nom_utilisateur.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nom_utilisateur.ForeColor = System.Drawing.Color.White;
+            this.Nom_utilisateur.Location = new System.Drawing.Point(74, 102);
+            this.Nom_utilisateur.Name = "Nom_utilisateur";
+            this.Nom_utilisateur.Size = new System.Drawing.Size(115, 18);
+            this.Nom_utilisateur.TabIndex = 3;
+            this.Nom_utilisateur.Text = "Nom d\'utlisateur";
+            this.Nom_utilisateur.Click += new System.EventHandler(this.label11_Click);
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.button1);
+            this.panel15.Controls.Add(this.btnfrermer);
             this.panel15.Controls.Add(this.textBox2);
             this.panel15.Controls.Add(this.label10);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
@@ -294,18 +272,19 @@
             this.panel15.Size = new System.Drawing.Size(1007, 63);
             this.panel15.TabIndex = 1;
             // 
-            // button1
+            // btnfrermer
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(951, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 30);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnfrermer.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnfrermer.FlatAppearance.BorderSize = 0;
+            this.btnfrermer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.btnfrermer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnfrermer.Location = new System.Drawing.Point(951, 22);
+            this.btnfrermer.Name = "btnfrermer";
+            this.btnfrermer.Size = new System.Drawing.Size(36, 30);
+            this.btnfrermer.TabIndex = 2;
+            this.btnfrermer.Text = "X";
+            this.btnfrermer.UseVisualStyleBackColor = true;
+            this.btnfrermer.Click += new System.EventHandler(this.btnfermerClick);
             // 
             // textBox2
             // 
@@ -330,7 +309,6 @@
             // pnlmenu
             // 
             this.pnlmenu.Controls.Add(this.pnl_dubas);
-            this.pnlmenu.Controls.Add(this.tlpnltitre_graph);
             this.pnlmenu.Controls.Add(this.tlpnlgraph);
             this.pnlmenu.Controls.Add(this.tlpnl_entete);
             this.pnlmenu.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -341,52 +319,14 @@
             this.pnlmenu.TabIndex = 2;
             this.pnlmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel16_Paint);
             // 
-            // tlpnltitre_graph
+            // pnl_dubas
             // 
-            this.tlpnltitre_graph.ColumnCount = 3;
-            this.tlpnltitre_graph.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.8718F));
-            this.tlpnltitre_graph.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.1282F));
-            this.tlpnltitre_graph.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32F));
-            this.tlpnltitre_graph.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpnltitre_graph.Controls.Add(this.panel22, 0, 0);
-            this.tlpnltitre_graph.Controls.Add(this.panel23, 1, 0);
-            this.tlpnltitre_graph.Controls.Add(this.panel24, 2, 0);
-            this.tlpnltitre_graph.Location = new System.Drawing.Point(9, 261);
-            this.tlpnltitre_graph.Name = "tlpnltitre_graph";
-            this.tlpnltitre_graph.RowCount = 1;
-            this.tlpnltitre_graph.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpnltitre_graph.Size = new System.Drawing.Size(975, 70);
-            this.tlpnltitre_graph.TabIndex = 6;
-            // 
-            // panel22
-            // 
-            this.panel22.Controls.Add(this.label15);
-            this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel22.Location = new System.Drawing.Point(3, 3);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(373, 64);
-            this.panel22.TabIndex = 0;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label15.Location = new System.Drawing.Point(31, 15);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(214, 40);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Installation par catégorie \r\nde véhicule";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
-            // 
-            // panel23
-            // 
-            this.panel23.Controls.Add(this.label19);
-            this.panel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel23.Location = new System.Drawing.Point(382, 3);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(277, 64);
-            this.panel23.TabIndex = 1;
+            this.pnl_dubas.Controls.Add(this.label17);
+            this.pnl_dubas.Controls.Add(this.chart7);
+            this.pnl_dubas.Location = new System.Drawing.Point(15, 583);
+            this.pnl_dubas.Name = "pnl_dubas";
+            this.pnl_dubas.Size = new System.Drawing.Size(975, 382);
+            this.pnl_dubas.TabIndex = 7;
             // 
             // label17
             // 
@@ -400,25 +340,23 @@
             this.label17.Text = "titre";
             this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
-            // panel24
+            // chart7
             // 
-            this.panel24.Controls.Add(this.label18);
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel24.Location = new System.Drawing.Point(665, 3);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(307, 64);
-            this.panel24.TabIndex = 2;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label18.Location = new System.Drawing.Point(64, 15);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(206, 40);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Installation par statut de\r\n payement";
+            chartArea1.Name = "ChartArea1";
+            this.chart7.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart7.Legends.Add(legend1);
+            this.chart7.Location = new System.Drawing.Point(379, 8);
+            this.chart7.Margin = new System.Windows.Forms.Padding(0);
+            this.chart7.Name = "chart7";
+            this.chart7.Padding = new System.Windows.Forms.Padding(0, 0, 10, 10);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart7.Series.Add(series1);
+            this.chart7.Size = new System.Drawing.Size(594, 374);
+            this.chart7.TabIndex = 0;
+            this.chart7.Text = "chart4";
             // 
             // tlpnlgraph
             // 
@@ -429,7 +367,7 @@
             this.tlpnlgraph.Controls.Add(this.flowLayoutPanel4, 0, 0);
             this.tlpnlgraph.Controls.Add(this.flowLayoutPanel5, 1, 0);
             this.tlpnlgraph.Controls.Add(this.flowLayoutPanel6, 2, 0);
-            this.tlpnlgraph.Location = new System.Drawing.Point(12, 355);
+            this.tlpnlgraph.Location = new System.Drawing.Point(12, 267);
             this.tlpnlgraph.Name = "tlpnlgraph";
             this.tlpnlgraph.RowCount = 1;
             this.tlpnlgraph.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -458,24 +396,22 @@
             this.chart4.Padding = new System.Windows.Forms.Padding(0, 0, 10, 10);
             this.chart4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
             series2.Legend = "Legend1";
-            series2.Name = "Series1";
+            series2.Name = "nom";
             series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
             series3.Legend = "Legend1";
-            series3.Name = "Series2";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series3";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series4";
+            series3.Name = "adresse";
+            series3.YValuesPerPoint = 6;
             this.chart4.Series.Add(series2);
             this.chart4.Series.Add(series3);
-            this.chart4.Series.Add(series4);
-            this.chart4.Series.Add(series5);
             this.chart4.Size = new System.Drawing.Size(373, 304);
             this.chart4.TabIndex = 0;
             this.chart4.Text = "chart4";
+            title1.Name = "Title1";
+            title1.Text = "Installation par statut  de payement";
+            this.chart4.Titles.Add(title1);
             // 
             // flowLayoutPanel5
             // 
@@ -497,10 +433,10 @@
             this.chart5.Margin = new System.Windows.Forms.Padding(0);
             this.chart5.Name = "chart5";
             this.chart5.Padding = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart5.Series.Add(series6);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart5.Series.Add(series4);
             this.chart5.Size = new System.Drawing.Size(281, 304);
             this.chart5.TabIndex = 0;
             this.chart5.Text = "chart4";
@@ -527,10 +463,10 @@
             this.chart6.Margin = new System.Windows.Forms.Padding(0);
             this.chart6.Name = "chart6";
             this.chart6.Padding = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chart6.Series.Add(series7);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart6.Series.Add(series5);
             this.chart6.Size = new System.Drawing.Size(300, 304);
             this.chart6.TabIndex = 0;
             this.chart6.Text = "chart4";
@@ -678,44 +614,15 @@
             this.label11.Text = "Nom du client";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // chart7
+            // pictureBox2
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart7.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart7.Legends.Add(legend1);
-            this.chart7.Location = new System.Drawing.Point(376, 8);
-            this.chart7.Margin = new System.Windows.Forms.Padding(0);
-            this.chart7.Name = "chart7";
-            this.chart7.Padding = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart7.Series.Add(series1);
-            this.chart7.Size = new System.Drawing.Size(593, 286);
-            this.chart7.TabIndex = 0;
-            this.chart7.Text = "chart4";
-            // 
-            // pnl_dubas
-            // 
-            this.pnl_dubas.Controls.Add(this.label17);
-            this.pnl_dubas.Controls.Add(this.chart7);
-            this.pnl_dubas.Location = new System.Drawing.Point(15, 671);
-            this.pnl_dubas.Name = "pnl_dubas";
-            this.pnl_dubas.Size = new System.Drawing.Size(975, 294);
-            this.pnl_dubas.TabIndex = 7;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.SlateBlue;
-            this.label19.Location = new System.Drawing.Point(3, 15);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(252, 40);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Nombre d\'installation classées\r\n par mois";
-            this.label19.Click += new System.EventHandler(this.label17_Click);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(73, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(116, 77);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // frmDashboard
             // 
@@ -727,20 +634,16 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.panel14.ResumeLayout(false);
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             this.pnlmenu.ResumeLayout(false);
-            this.tlpnltitre_graph.ResumeLayout(false);
-            this.panel22.ResumeLayout(false);
-            this.panel22.PerformLayout();
-            this.panel23.ResumeLayout(false);
-            this.panel23.PerformLayout();
-            this.panel24.ResumeLayout(false);
-            this.panel24.PerformLayout();
+            this.pnl_dubas.ResumeLayout(false);
+            this.pnl_dubas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart7)).EndInit();
             this.tlpnlgraph.ResumeLayout(false);
             this.tlpnlgraph.PerformLayout();
             this.flowLayoutPanel4.ResumeLayout(false);
@@ -762,61 +665,18 @@
             this.pnlclient.ResumeLayout(false);
             this.pnlclient.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart7)).EndInit();
-            this.pnl_dubas.ResumeLayout(false);
-            this.pnl_dubas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel pnlcommandes;
-        private System.Windows.Forms.Button btnparametre;
-        private System.Windows.Forms.Button btntechnicien;
-        private System.Windows.Forms.Button btninstallation;
-        private System.Windows.Forms.Button btncommande;
-        private System.Windows.Forms.Button btnclient;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnvente;
-        private System.Windows.Forms.Button btndachboard;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnfermer;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnfrermer;
         private System.Windows.Forms.Panel pnlmenu;
         private System.Windows.Forms.TableLayoutPanel tlpnlgraph;
         private System.Windows.Forms.TableLayoutPanel tlpnl_entete;
@@ -834,7 +694,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label Nom_utilisateur;
         private System.Windows.Forms.Button btng_parametre;
         private System.Windows.Forms.Button btnr_vente;
         private System.Windows.Forms.Button btng_commande;
@@ -845,19 +705,12 @@
         private System.Windows.Forms.Panel pnlcommand;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart6;
-        private System.Windows.Forms.TableLayoutPanel tlpnltitre_graph;
-        private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Panel pnl_dubas;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart7;
-        private System.Windows.Forms.Label label19;
     }
 }
