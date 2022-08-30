@@ -98,35 +98,35 @@
     <Compile Include="frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmenregistrementClients.cs">
+    <Compile Include="frmEnregistrementClients.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmenregistrementClients.Designer.cs">
-      <DependentUpon>frmenregistrementClients.cs</DependentUpon>
+    <Compile Include="frmEnregistrementClients.Designer.cs">
+      <DependentUpon>frmEnregistrementClients.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmenrg_techniciens.cs">
+    <Compile Include="frmEnrg_techniciens.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmenrg_techniciens.Designer.cs">
-      <DependentUpon>frmenrg_techniciens.cs</DependentUpon>
+    <Compile Include="frmEnrg_techniciens.Designer.cs">
+      <DependentUpon>frmEnrg_techniciens.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmerreur.cs">
+    <Compile Include="frmErreur.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmerreur.Designer.cs">
-      <DependentUpon>frmerreur.cs</DependentUpon>
+    <Compile Include="frmErreur.Designer.cs">
+      <DependentUpon>frmErreur.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmgestionCompte.cs">
+    <Compile Include="frmGestionCompte.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmgestionCompte.Designer.cs">
-      <DependentUpon>frmgestionCompte.cs</DependentUpon>
+    <Compile Include="frmGestionCompte.Designer.cs">
+      <DependentUpon>frmGestionCompte.cs</DependentUpon>
     </Compile>
-    <Compile Include="frminstallation.cs">
+    <Compile Include="frmInstallation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frminstallation.Designer.cs">
-      <DependentUpon>frminstallation.cs</DependentUpon>
+    <Compile Include="frmInstallation.Designer.cs">
+      <DependentUpon>frmInstallation.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMotDePassOublie.cs">
       <SubType>Form</SubType>
@@ -134,17 +134,23 @@
     <Compile Include="frmMotDePassOublie.Designer.cs">
       <DependentUpon>frmMotDePassOublie.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmsuivi.cs">
+    <Compile Include="frmSuivi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmsuivi.Designer.cs">
-      <DependentUpon>frmsuivi.cs</DependentUpon>
+    <Compile Include="frmSuivi.Designer.cs">
+      <DependentUpon>frmSuivi.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmvehicule.cs">
+    <Compile Include="frmVehicule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmvehicule.Designer.cs">
-      <DependentUpon>frmvehicule.cs</DependentUpon>
+    <Compile Include="frmVehicule.Designer.cs">
+      <DependentUpon>frmVehicule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVente.Designer.cs">
+      <DependentUpon>frmVente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -163,29 +169,32 @@
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmenregistrementClients.resx">
-      <DependentUpon>frmenregistrementClients.cs</DependentUpon>
+    <EmbeddedResource Include="frmEnregistrementClients.resx">
+      <DependentUpon>frmEnregistrementClients.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmenrg_techniciens.resx">
-      <DependentUpon>frmenrg_techniciens.cs</DependentUpon>
+    <EmbeddedResource Include="frmEnrg_techniciens.resx">
+      <DependentUpon>frmEnrg_techniciens.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmerreur.resx">
-      <DependentUpon>frmerreur.cs</DependentUpon>
+    <EmbeddedResource Include="frmErreur.resx">
+      <DependentUpon>frmErreur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmgestionCompte.resx">
-      <DependentUpon>frmgestionCompte.cs</DependentUpon>
+    <EmbeddedResource Include="frmGestionCompte.resx">
+      <DependentUpon>frmGestionCompte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frminstallation.resx">
-      <DependentUpon>frminstallation.cs</DependentUpon>
+    <EmbeddedResource Include="frmInstallation.resx">
+      <DependentUpon>frmInstallation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMotDePassOublie.resx">
       <DependentUpon>frmMotDePassOublie.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmsuivi.resx">
-      <DependentUpon>frmsuivi.cs</DependentUpon>
+    <EmbeddedResource Include="frmSuivi.resx">
+      <DependentUpon>frmSuivi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmvehicule.resx">
-      <DependentUpon>frmvehicule.cs</DependentUpon>
+    <EmbeddedResource Include="frmVehicule.resx">
+      <DependentUpon>frmVehicule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVente.resx">
+      <DependentUpon>frmVente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

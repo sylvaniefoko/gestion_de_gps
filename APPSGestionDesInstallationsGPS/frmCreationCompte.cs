@@ -111,7 +111,7 @@ namespace APPSGestionDesInstallationsGPS
             else
             {
                 AccesDonnees.erreur = "saisir le mot de pass correct";                              
-                frmerreur f = new frmerreur();
+                frmErreur f = new frmErreur();
                 f.ShowDialog();
                 
             }

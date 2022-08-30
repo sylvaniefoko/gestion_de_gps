@@ -11,12 +11,12 @@ using System.Runtime.InteropServices;
 
 namespace APPSGestionDesInstallationsGPS
 {
-    public partial class frmenrg_techniciens : Form
+    public partial class frmEnrg_techniciens : Form
     {
         AccesDonnees a = new AccesDonnees();
         string requete="";
         int lematricule = 0;
-        public frmenrg_techniciens()
+        public frmEnrg_techniciens()
         {
             InitializeComponent();
           
@@ -86,7 +86,7 @@ namespace APPSGestionDesInstallationsGPS
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 AccesDonnees.erreur = "veuillez saisir des chiffres";
-                frmerreur f = new frmerreur();
+                frmErreur f = new frmErreur();
                 f.ShowDialog();
                 e.Handled = true;
                 return;

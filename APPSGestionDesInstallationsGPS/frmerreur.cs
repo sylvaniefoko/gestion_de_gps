@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace APPSGestionDesInstallationsGPS
 {
-    public partial class frmerreur : Form
+    public partial class frmErreur : Form
     {
         AccesDonnees a = new AccesDonnees();
-        public frmerreur()
+        public frmErreur()
         {
             InitializeComponent();
         }

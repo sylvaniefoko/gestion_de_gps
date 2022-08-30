@@ -11,16 +11,16 @@ using System.Runtime.InteropServices;
 
 namespace APPSGestionDesInstallationsGPS
 {
-    public partial class frminstallation : Form
+    public partial class frmInstallation : Form
     {
         AccesDonnees a = new AccesDonnees();
         string requete = "";
-        int idclient,idcommande,compteur_vehicule,idvehicule, idtechnicien1,idtechnicien2, idtechnicien3, idtechnicien4, idtechnicien5,idinstallation = 0;
+        int idclient,idcommande,compteur_vehicule,idvehicule, idtechnicien1,idtechnicien2, idtechnicien3, idtechnicien4, idtechnicien5,idinstallation,quatite,commission = 0;
         int[] imei_gps = new int[100];
         int[] num_gps = new int[100];
         int[] idvehic = new int[100];
 
-        public frminstallation()
+        public frmInstallation()
         {
             InitializeComponent();
         }
@@ -46,6 +46,8 @@ namespace APPSGestionDesInstallationsGPS
             cbotechnicien.Text = "";
             cbovehicule.Text ="";
             cbostatut.Text= "";
+            cboservice.Text = "";
+            txtcommercial.Text = "";
             cboclient.Text = "";
             requete = "SELECT id_commande,concat(nom,' ',prenom),Date_commande,lieu,quantite FROM commande c, client cc WHERE cc.id_client=c.id_client;";
             a.ChargeTable(dataGridView2, requete);
@@ -77,7 +79,7 @@ namespace APPSGestionDesInstallationsGPS
         private void btnmodifier_Click(object sender, EventArgs e)
         {
             idtechnicien();
-            requete = "update installation set statut='" + cbostatut.Text + "', id_technicien1='"+idtechnicien1+ "', id_technicien2='" + idtechnicien2 + "' ,id_technicien3='" + idtechnicien3 + "', id_technicien4='" + idtechnicien4 + "',id_technicien5='"+idtechnicien5+"' where id_installation='" + idinstallation+"'" ;
+            requete = "update installation set statut='" + cbostatut.Text + "', id_technicien1='"+idtechnicien1+ "', id_technicien2='" + idtechnicien2 + "' ,id_technicien3='" + idtechnicien3 + "', id_technicien4='" + idtechnicien4 + "',id_technicien5='"+idtechnicien5+ "',type_service='" + cboservice.Text + "',nom_commercial='" + txtcommercial.Text + "' where id_installation='" + idinstallation+"'" ;
             a.ExecuteRequette(requete);
             chargement();          
         }
@@ -115,14 +117,14 @@ namespace APPSGestionDesInstallationsGPS
         }
         private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            idcommande = Convert.ToInt32(dataGridView2.CurrentRow.Cells[0].Value);           
+            idcommande = Convert.ToInt32(dataGridView2.CurrentRow.Cells[0].Value);       
             requete = " SELECT concat(categorie_vehicule,' ',marque_vehicule,' ', immatriculation_vehicule) FROM vehicule , cat_vehicule  WHERE vehicule.id_catvehicule = cat_vehicule.id_catvehicule AND vehicule.id_commande = '" + idcommande + "'";
             a.ChargeCombo(cbovehicule, requete);                  
             requete = "select count(id_commande) from installation where id_commande='" + idcommande + "'";
             if (a.ResultatRequette1(requete) != 0)
             {
                 AccesDonnees.erreur ="Cette commande a déjà été installée";
-                frmerreur f = new frmerreur();
+                frmErreur f = new frmErreur();
                 f.ShowDialog();
                 charge_champs();
                 btnEnregistrer.Enabled = false;                                
@@ -130,15 +132,16 @@ namespace APPSGestionDesInstallationsGPS
                 btnmodifier2.Visible = true;
                 btnok.Visible = false;
             }
-            if(a.ResultatRequette1(requete) == 0)
+            if (a.ResultatRequette1(requete) == 0)
             {
                 idclient = Convert.ToInt32(dataGridView2.CurrentRow.Cells[1].Value);
                 requete = "select concat(nom,' ',prenom) from client where id_client='" + idclient + "'";
                 string client = a.ResultatRequette(requete);
-                AccesDonnees.confirmation = "Vous venez de selectionner la commande du " + a.date_vers_mysql(dtpDate.Text) + "";
+                AccesDonnees.confirmation = "Vous venez de selectionner la commande de "+client+", du " + a.date_vers_mysql(dtpDate.Text) + "";
                 frmConfirmation f = new frmConfirmation();
                 f.ShowDialog();
-                btnmodifier.Enabled = false;                
+                btnmodifier.Enabled = false;
+                btnok.Visible = true;
             }                     
         }
 
@@ -188,10 +191,21 @@ namespace APPSGestionDesInstallationsGPS
         {
             idtechnicien();
             idcommande = Convert.ToInt32(dataGridView2.CurrentRow.Cells[0].Value);
-            requete = "INSERT INTO `installation`(`id_commande`, `id_technicien1`,`id_technicien2`,`id_technicien3`,`id_technicien4`,`id_technicien5` ,`date_installation`, `statut`) VALUES ('" + idcommande + "','" + idtechnicien1 + "','" + idtechnicien2 + "','" + idtechnicien3 + "','" + idtechnicien4 + "','" + idtechnicien5 + "','" + a.date_vers_mysql(dtpDate.Text) + "','" + cbostatut.Text + "')";
+            quatite = Convert.ToInt32(dataGridView2.CurrentRow.Cells[5].Value);
+            if (txtcommercial.Text == "SACTION")
+            {
+               commission = 5000 * quatite;
+            }
+            else
+            {
+                commission = 7000 * quatite;
+            }
+            requete = "INSERT INTO `installation`(`id_commande`, `id_technicien1`,`id_technicien2`,`id_technicien3`,`id_technicien4`,`id_technicien5` ,`date_installation`, `statut`,`type_service`,`nom_commercial`) VALUES ('" + idcommande + "','" + idtechnicien1 + "','" + idtechnicien2 + "','" + idtechnicien3 + "','" + idtechnicien4 + "','" + idtechnicien5 + "','" + a.date_vers_mysql(dtpDate.Text) + "','" + cbostatut.Text + "','" + cboservice.Text + "','" + txtcommercial.Text +"')";
             a.ExecuteRequette(requete);
             requete = "select id_installation from installation where id_commande='" + idcommande + "'and `id_technicien1`='" + idtechnicien1 + "'and `id_technicien2`='" + idtechnicien2 + "'and `id_technicien3`='" + idtechnicien3 + "'and `id_technicien4`='" + idtechnicien4 + "'and `id_technicien5`='" + idtechnicien5 + "' and `date_installation`='" + a.date_vers_mysql(dtpDate.Text) + "'and  `statut`='" + cbostatut.Text + "'  ";
             idinstallation = a.ResultatRequette1(requete);
+            requete = "insert into commission (`prix_commission`,`id_installation`) values ('" + commission + "','"+idinstallation+"')";
+            a.ExecuteRequette(requete);
             for (int i = 0; i <= compteur_vehicule-1; i++)
             {
                 requete = "insert into gps (id_vehicule,id_installation,num_gps,imei_gps) values ('"+idvehic[i]+"','"+idinstallation+"','" + num_gps[i] + "','" + imei_gps[i] + "')";
@@ -206,7 +220,7 @@ namespace APPSGestionDesInstallationsGPS
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 AccesDonnees.erreur="veuillez saisir des chiffres";
-                frmerreur f = new frmerreur();
+                frmErreur f = new frmErreur();
                 f.ShowDialog();
                 e.Handled = true;
                 return;
@@ -237,6 +251,26 @@ namespace APPSGestionDesInstallationsGPS
             cbovehicule.Text = "";
         }
 
+        private void txtcommercial_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txtservice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void NOM_1_Click(object sender, EventArgs e)
         {
 
@@ -247,7 +281,7 @@ namespace APPSGestionDesInstallationsGPS
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 AccesDonnees.erreur = "veuillez saisir des chiffres";
-                frmerreur f = new frmerreur();
+                frmErreur f = new frmErreur();
                 f.ShowDialog();
                 e.Handled = true;
                 return;
@@ -318,7 +352,7 @@ namespace APPSGestionDesInstallationsGPS
 
         private void btntrier_Click(object sender, EventArgs e)
         {
-            requete = "select id_client from client where concat(nom,' ',srenom)='" + cboclient.Text + "'";
+            requete = "select id_client from client where concat(nom,' ',prenom)='" + cboclient.Text + "'";
             idclient = a.ResultatRequette1(requete);
             if (nom.Checked==true)
             {

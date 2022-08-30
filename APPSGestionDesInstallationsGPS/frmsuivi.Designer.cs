@@ -1,6 +1,6 @@
 ﻿namespace APPSGestionDesInstallationsGPS
 {
-    partial class frmsuivi
+    partial class frmSuivi
     {
         /// <summary>
         /// Required designer variable.
@@ -47,10 +47,10 @@
             // btnSupprimer
             // 
             this.btnSupprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSupprimer.Location = new System.Drawing.Point(294, 235);
+            this.btnSupprimer.Location = new System.Drawing.Point(223, 235);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(107, 25);
-            this.btnSupprimer.TabIndex = 43;
+            this.btnSupprimer.TabIndex = 7;
             this.btnSupprimer.Text = "Supprimer";
             this.btnSupprimer.UseVisualStyleBackColor = true;
             this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
@@ -59,19 +59,19 @@
             // 
             this.txtcategorie.BackColor = System.Drawing.SystemColors.Info;
             this.txtcategorie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcategorie.Location = new System.Drawing.Point(250, 157);
+            this.txtcategorie.Location = new System.Drawing.Point(175, 164);
             this.txtcategorie.Name = "txtcategorie";
             this.txtcategorie.Size = new System.Drawing.Size(286, 23);
-            this.txtcategorie.TabIndex = 42;
+            this.txtcategorie.TabIndex = 2;
             // 
             // txtprix
             // 
             this.txtprix.BackColor = System.Drawing.SystemColors.Info;
             this.txtprix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprix.Location = new System.Drawing.Point(250, 193);
+            this.txtprix.Location = new System.Drawing.Point(175, 193);
             this.txtprix.Name = "txtprix";
             this.txtprix.Size = new System.Drawing.Size(286, 23);
-            this.txtprix.TabIndex = 41;
+            this.txtprix.TabIndex = 4;
             this.txtprix.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprix_KeyPress);
             // 
             // label1
@@ -81,7 +81,7 @@
             this.label1.Location = new System.Drawing.Point(12, 199);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 17);
-            this.label1.TabIndex = 39;
+            this.label1.TabIndex = 3;
             this.label1.Text = "Prix du suivi:";
             // 
             // label2
@@ -91,16 +91,16 @@
             this.label2.Location = new System.Drawing.Point(10, 162);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 17);
-            this.label2.TabIndex = 40;
+            this.label2.TabIndex = 1;
             this.label2.Text = "type de suivi:";
             // 
             // btnAnnuler
             // 
             this.btnAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnnuler.Location = new System.Drawing.Point(443, 235);
+            this.btnAnnuler.Location = new System.Drawing.Point(366, 235);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(93, 25);
-            this.btnAnnuler.TabIndex = 38;
+            this.btnAnnuler.TabIndex = 8;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
             this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
@@ -108,10 +108,10 @@
             // btnmodifier
             // 
             this.btnmodifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmodifier.Location = new System.Drawing.Point(161, 235);
+            this.btnmodifier.Location = new System.Drawing.Point(111, 235);
             this.btnmodifier.Name = "btnmodifier";
             this.btnmodifier.Size = new System.Drawing.Size(90, 25);
-            this.btnmodifier.TabIndex = 37;
+            this.btnmodifier.TabIndex = 6;
             this.btnmodifier.Text = "Modifier";
             this.btnmodifier.UseVisualStyleBackColor = true;
             this.btnmodifier.Click += new System.EventHandler(this.btnmodifier_Click);
@@ -119,10 +119,10 @@
             // btnEnregistrer
             // 
             this.btnEnregistrer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnregistrer.Location = new System.Drawing.Point(9, 235);
+            this.btnEnregistrer.Location = new System.Drawing.Point(7, 235);
             this.btnEnregistrer.Name = "btnEnregistrer";
-            this.btnEnregistrer.Size = new System.Drawing.Size(113, 25);
-            this.btnEnregistrer.TabIndex = 36;
+            this.btnEnregistrer.Size = new System.Drawing.Size(92, 25);
+            this.btnEnregistrer.TabIndex = 5;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = true;
             this.btnEnregistrer.Click += new System.EventHandler(this.btnEnregistrer_Click);
@@ -144,8 +144,8 @@
             this.type_suivi});
             this.dataGridView1.Location = new System.Drawing.Point(10, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(526, 111);
-            this.dataGridView1.TabIndex = 44;
+            this.dataGridView1.Size = new System.Drawing.Size(473, 111);
+            this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // id_suivi
@@ -169,12 +169,12 @@
             this.type_suivi.HeaderText = "type suivi";
             this.type_suivi.Name = "type_suivi";
             // 
-            // frmsuivi
+            // frmSuivi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(546, 279);
+            this.ClientSize = new System.Drawing.Size(487, 279);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSupprimer);
             this.Controls.Add(this.txtcategorie);
@@ -184,7 +184,10 @@
             this.Controls.Add(this.btnAnnuler);
             this.Controls.Add(this.btnmodifier);
             this.Controls.Add(this.btnEnregistrer);
-            this.Name = "frmsuivi";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frmSuivi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Enregistrement des  suivis ";
             this.Load += new System.EventHandler(this.frmsuivi_Load);

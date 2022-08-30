@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id_catvehicule = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prix = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAnnuler = new System.Windows.Forms.Button();
             this.btnmodifier = new System.Windows.Forms.Button();
             this.btnEnregistrer = new System.Windows.Forms.Button();
@@ -37,9 +40,6 @@
             this.txtPrix = new System.Windows.Forms.TextBox();
             this.txtcategorie = new System.Windows.Forms.TextBox();
             this.btnSupprimer = new System.Windows.Forms.Button();
-            this.id_catvehicule = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categorie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prix = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +56,28 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // id_catvehicule
+            // 
+            this.id_catvehicule.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.id_catvehicule.DataPropertyName = "id_catvehicule";
+            this.id_catvehicule.HeaderText = "id_catveicule";
+            this.id_catvehicule.Name = "id_catvehicule";
+            this.id_catvehicule.Visible = false;
+            // 
+            // categorie
+            // 
+            this.categorie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.categorie.DataPropertyName = "categorie_vehicule";
+            this.categorie.HeaderText = "Catégorie";
+            this.categorie.Name = "categorie";
+            // 
+            // prix
+            // 
+            this.prix.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.prix.DataPropertyName = "prix_installation";
+            this.prix.HeaderText = "Prix de l\'installation";
+            this.prix.Name = "prix";
             // 
             // btnAnnuler
             // 
@@ -142,29 +164,7 @@
             this.btnSupprimer.UseVisualStyleBackColor = true;
             this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
             // 
-            // id_catvehicule
-            // 
-            this.id_catvehicule.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.id_catvehicule.DataPropertyName = "id_catvehicule";
-            this.id_catvehicule.HeaderText = "id_catveicule";
-            this.id_catvehicule.Name = "id_catvehicule";
-            this.id_catvehicule.Visible = false;
-            // 
-            // categorie
-            // 
-            this.categorie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.categorie.DataPropertyName = "categorie_vehicule";
-            this.categorie.HeaderText = "Catégorie";
-            this.categorie.Name = "categorie";
-            // 
-            // prix
-            // 
-            this.prix.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.prix.DataPropertyName = "prix_installation";
-            this.prix.HeaderText = "Prix de l\'installation";
-            this.prix.Name = "prix";
-            // 
-            // frmvehicule
+            // frmVehicule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -179,7 +179,8 @@
             this.Controls.Add(this.btnmodifier);
             this.Controls.Add(this.btnEnregistrer);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "frmvehicule";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Name = "frmVehicule";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Enregistrement des Catégories de véhicule";
             this.Load += new System.EventHandler(this.frmvehicule_Load);

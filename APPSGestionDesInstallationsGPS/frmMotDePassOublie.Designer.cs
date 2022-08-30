@@ -61,7 +61,7 @@
             this.label2.Location = new System.Drawing.Point(17, 151);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 17);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 3;
             this.label2.Text = "Question de sécurité:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
@@ -73,7 +73,7 @@
             this.label3.Location = new System.Drawing.Point(17, 197);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 17);
-            this.label3.TabIndex = 3;
+            this.label3.TabIndex = 5;
             this.label3.Text = "Réponse:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -86,7 +86,7 @@
             this.label4.Location = new System.Drawing.Point(17, 245);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(162, 17);
-            this.label4.TabIndex = 4;
+            this.label4.TabIndex = 7;
             this.label4.Text = "Nouveau mot de passe: ";
             // 
             // txtlogin
@@ -96,16 +96,16 @@
             this.txtlogin.Location = new System.Drawing.Point(196, 93);
             this.txtlogin.Name = "txtlogin";
             this.txtlogin.Size = new System.Drawing.Size(286, 23);
-            this.txtlogin.TabIndex = 1;
+            this.txtlogin.TabIndex = 2;
             // 
             // txtreponse
             // 
             this.txtreponse.BackColor = System.Drawing.SystemColors.Info;
             this.txtreponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtreponse.Location = new System.Drawing.Point(196, 189);
+            this.txtreponse.Location = new System.Drawing.Point(196, 191);
             this.txtreponse.Name = "txtreponse";
             this.txtreponse.Size = new System.Drawing.Size(286, 23);
-            this.txtreponse.TabIndex = 4;
+            this.txtreponse.TabIndex = 6;
             this.txtreponse.UseSystemPasswordChar = true;
             this.txtreponse.TextChanged += new System.EventHandler(this.txtreponse_TextChanged);
             // 
@@ -116,7 +116,7 @@
             this.txtnouveau.Location = new System.Drawing.Point(196, 238);
             this.txtnouveau.Name = "txtnouveau";
             this.txtnouveau.Size = new System.Drawing.Size(286, 23);
-            this.txtnouveau.TabIndex = 5;
+            this.txtnouveau.TabIndex = 8;
             this.txtnouveau.UseSystemPasswordChar = true;
             // 
             // cboquestion
@@ -131,7 +131,7 @@
             this.cboquestion.Location = new System.Drawing.Point(196, 146);
             this.cboquestion.Name = "cboquestion";
             this.cboquestion.Size = new System.Drawing.Size(286, 25);
-            this.cboquestion.TabIndex = 3;
+            this.cboquestion.TabIndex = 4;
             // 
             // label5
             // 
@@ -157,7 +157,7 @@
             this.btnAnnuler.Location = new System.Drawing.Point(335, 310);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(147, 36);
-            this.btnAnnuler.TabIndex = 6;
+            this.btnAnnuler.TabIndex = 10;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = false;
             this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click_1);
@@ -173,7 +173,7 @@
             this.btnEnregistrer.Location = new System.Drawing.Point(20, 310);
             this.btnEnregistrer.Name = "btnEnregistrer";
             this.btnEnregistrer.Size = new System.Drawing.Size(139, 36);
-            this.btnEnregistrer.TabIndex = 6;
+            this.btnEnregistrer.TabIndex = 9;
             this.btnEnregistrer.Text = "Enregistrer";
             this.btnEnregistrer.UseVisualStyleBackColor = false;
             this.btnEnregistrer.Click += new System.EventHandler(this.btnEnregistrer_Click);
@@ -195,6 +195,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmMotDePassOublie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mot de passe oublié";

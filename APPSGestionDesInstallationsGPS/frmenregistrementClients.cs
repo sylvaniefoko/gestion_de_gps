@@ -121,7 +121,7 @@ namespace APPSGestionDesInstallationsGPS
         {
             requete = "select * from client";
             a.ChargeTable(dataGridView1, requete);
-            txtid_client.Text = "";
+           
             txtNom.Text = "";
             txtPrenom.Text = "";
             txtAdresse.Text = "";
@@ -130,7 +130,7 @@ namespace APPSGestionDesInstallationsGPS
             btnEnregistrer.Enabled = true;
             btnmodifier.Enabled = false;
             btnSupprimer.Enabled = false;
-            txtid_client.Enabled = false;
+
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -141,11 +141,10 @@ namespace APPSGestionDesInstallationsGPS
             txtAdresse.Text = Convert.ToString(dataGridView1.CurrentRow.Cells[3].Value);
             txtTelephone.Text = Convert.ToString(dataGridView1.CurrentRow.Cells[4].Value);
             txtVille.Text = Convert.ToString(dataGridView1.CurrentRow.Cells[5].Value);
-            txtid_client.Text = lematricule;
             btnEnregistrer.Enabled = false;
             btnmodifier.Enabled = true;
             btnSupprimer.Enabled = true;
-            txtid_client.Enabled = false;
+          
         }
 
         private void btnFermer_Click(object sender, EventArgs e)

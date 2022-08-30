@@ -82,3 +82,4 @@ F:\application Gps\APPSGestionDesInstallationsGPS\APPSGestionDesInstallationsGPS
 F:\application Gps\APPSGestionDesInstallationsGPS\APPSGestionDesInstallationsGPS\obj\Debug\APPSGestionDesInstallationsGPS.frmDachboard.resources
 F:\application Gps\APPSGestionDesInstallationsGPS\APPSGestionDesInstallationsGPS\obj\Debug\APPSGestionDesInstallationsGPS.frmerreur.resources
 C:\Users\Saction\Documents\Visual Studio 2015\Projects\APPSGestionDesInstallationsGPS\APPSGestionDesInstallationsGPS\obj\Debug\APPSGestionDesInstallationsGPS.frmDashboard.resources
+C:\Users\Saction\Documents\Visual Studio 2015\Projects\APPSGestionDesInstallationsGPS\APPSGestionDesInstallationsGPS\obj\Debug\APPSGestionDesInstallationsGPS.frmVente.resources

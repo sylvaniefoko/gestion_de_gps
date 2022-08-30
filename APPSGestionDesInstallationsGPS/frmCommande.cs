@@ -347,12 +347,12 @@ namespace APPSGestionDesInstallationsGPS
                 Quantite_poids_lourds++;
                 txtlourds.Text = (Quantite_poids_lourds).ToString();
             }
-            if (cbocategorie.Text == "Vehicule legers")
+            if (cbocategorie.Text == "Vehicules legers")
             {
                 Quantite_vehicule_legers++;
                 txtlegers.Text = (Quantite_vehicule_legers).ToString();
             }
-            if (cbocategorie.Text == "Tricycle a moteur")
+            if (cbocategorie.Text == "Tricycle à moteur")
             {
                 Quantite_tricycle++;
                 txttricycle.Text = (Quantite_tricycle).ToString();
@@ -367,7 +367,7 @@ namespace APPSGestionDesInstallationsGPS
         {
             int valuedurer = 0;
                 AccesDonnees.erreur = "Veuillez remplir tous les champs";
-                frmerreur f = new frmerreur();
+                frmErreur f = new frmErreur();
                 marquevehicule[compteur_veh] = txtmarque.Text;
                 tab_immatriculation[compteur_veh] = txtimmatriculation.Text;
                 tab_categorie[compteur_veh] = a.ResultatRequette1("SELECT `id_catvehicule` FROM `cat_vehicule` WHERE `categorie_vehicule`= '" + cbocategorie.Text + "'");

@@ -49,6 +49,9 @@ namespace APPSGestionDesInstallationsGPS
             pnlcommand.Top = btng_installation.Top;
             pnlcommand.Left = btng_installation.Left;
             btng_installation.BackColor = Color.FromArgb(46, 51, 73);
+
+            frmInstallation f = new frmInstallation();
+            f.ShowDialog();
          
         }
 
@@ -101,7 +104,8 @@ namespace APPSGestionDesInstallationsGPS
             pnlcommand.Top = btng_technicien.Top;
             pnlcommand.Left = btng_technicien.Left;
             btng_technicien.BackColor = Color.FromArgb(46, 51, 73);
-         
+            frmEnrg_techniciens f = new frmEnrg_techniciens();
+            f.ShowDialog();
         }
 
         private void btng_commande_Click_1(object sender, EventArgs e)
@@ -110,7 +114,8 @@ namespace APPSGestionDesInstallationsGPS
             pnlcommand.Top = btng_commande.Top;
             pnlcommand.Left = btng_commande.Left;
             btng_commande.BackColor = Color.FromArgb(46, 51, 73);
-          
+            frmCommande f = new frmCommande();
+            f.ShowDialog();
         }
 
         private void btnr_vente_Click_1(object sender, EventArgs e)
@@ -119,6 +124,8 @@ namespace APPSGestionDesInstallationsGPS
             pnlcommand.Top = btnr_vente.Top;
             pnlcommand.Left = btnr_vente.Left;
             btnr_vente.BackColor = Color.FromArgb(46, 51, 73);
+            frmVente f = new frmVente();
+            f.ShowDialog();
         }
 
         private void btng_parametre_Click_1(object sender, EventArgs e)
@@ -127,6 +134,9 @@ namespace APPSGestionDesInstallationsGPS
             pnlcommand.Top = btng_parametre.Top;
             pnlcommand.Left = btng_parametre.Left;
             btng_parametre.BackColor = Color.FromArgb(46, 51, 73);
+            frmVehicule f = new frmVehicule();
+            f.ShowDialog();
+
         }
 
         private void label15_Click(object sender, EventArgs e)
@@ -157,6 +167,12 @@ namespace APPSGestionDesInstallationsGPS
         private void btnfermerClick(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnfrermer_ForeColorChanged(object sender, EventArgs e)
+        {
+
+            
         }
     }
 }

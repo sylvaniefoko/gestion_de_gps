@@ -13,12 +13,12 @@ using System.Runtime.InteropServices;
 
 namespace APPSGestionDesInstallationsGPS
 {
-    public partial class frmsuivi : Form
+    public partial class frmSuivi : Form
     {
         AccesDonnees a = new AccesDonnees();
         string requete = "";
         int suivi = 0;
-            public frmsuivi()
+            public frmSuivi()
         {
                 InitializeComponent();
         }
@@ -79,7 +79,7 @@ namespace APPSGestionDesInstallationsGPS
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 AccesDonnees.erreur = "veuillez saisir des chiffres";
-                frmerreur f = new frmerreur();
+                frmErreur f = new frmErreur();
                 f.ShowDialog();
                 e.Handled = true;
                 return;

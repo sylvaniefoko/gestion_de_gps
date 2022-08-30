@@ -1,6 +1,6 @@
 ﻿namespace APPSGestionDesInstallationsGPS
 {
-    partial class frmgestionCompte
+    partial class frmGestionCompte
     {
         /// <summary>
         /// Required designer variable.
@@ -154,7 +154,7 @@
             this.btnSupprimer.UseVisualStyleBackColor = false;
             this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
             // 
-            // frmgestionCompte
+            // frmGestionCompte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -163,7 +163,8 @@
             this.Controls.Add(this.btnFermer);
             this.Controls.Add(this.btnSupprimer);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "frmgestionCompte";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Name = "frmGestionCompte";
             this.Text = "Gestionnaire des comptes";
             this.Load += new System.EventHandler(this.frmgestionCompte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

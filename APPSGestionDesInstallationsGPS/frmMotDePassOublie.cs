@@ -56,7 +56,7 @@ namespace APPSGestionDesInstallationsGPS
             else
             {
                 AccesDonnees.erreur ="veuillez saisir une reponse correct" ;
-                frmerreur f = new frmerreur();
+                frmErreur f = new frmErreur();
                 f.ShowDialog();
             }
 

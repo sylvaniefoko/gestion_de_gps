@@ -11,12 +11,12 @@ using System.Runtime.InteropServices;
 
 namespace APPSGestionDesInstallationsGPS
 {
-    public partial class frmgestionCompte : Form
+    public partial class frmGestionCompte : Form
     {
         AccesDonnees a = new AccesDonnees();
         string requete;
         int lematricule;
-        public frmgestionCompte()
+        public frmGestionCompte()
         {
             InitializeComponent();
         }
