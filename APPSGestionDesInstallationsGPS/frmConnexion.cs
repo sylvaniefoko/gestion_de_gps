@@ -37,34 +37,6 @@ namespace APPSGestionDesInstallationsGPS
             btnlogin.Enabled = true;
         }
 
-
-        private void btnlogin_Click(object sender, EventArgs e)
-        {
-            requete = "SELECT id_compte FROM compte WHERE Mot_de_passe='" + a.CryptageMD5(txtmotpass.Text) + "' and  login='"+txtlogin.Text+"'";
-            if (a.ResultatRequette1(requete) !=0) 
-            {
-                int idcompte = a.ResultatRequette1(requete);
-                requete = "select login from compte where id_compte='" + idcompte + "'";
-               AccesDonnees.login = a.ResultatRequette(requete);        
-                frmDashboard f = new frmDashboard();
-                f.ShowDialog();
-                //AccesDonnees.confirmation = "connexion reussi";
-               //frmConfirmation b = new frmConfirmation();
-               // b.ShowDialog();
-            }
-            else
-            {
-                AccesDonnees.erreur ="saisissez un mot de passe ou un nom d'utilisteur correct" ;
-                frmErreur f = new frmErreur();
-                f.ShowDialog();
-            }
-        }
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmMotDePassOublie f = new frmMotDePassOublie();
-            f.ShowDialog();
-        }
-
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -97,8 +69,8 @@ namespace APPSGestionDesInstallationsGPS
 
         private void txtmotpass_TextChanged(object sender, EventArgs e)
         {
-            
-            txtmotpass.UseSystemPasswordChar = true;
+
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -108,8 +80,7 @@ namespace APPSGestionDesInstallationsGPS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmCreationCompte f = new frmCreationCompte();
-            f.ShowDialog();
+         
         }
 
         private void txtlogin_Click(object sender, EventArgs e)
@@ -120,6 +91,52 @@ namespace APPSGestionDesInstallationsGPS
         private void txtmotpass_Click(object sender, EventArgs e)
         {
             txtmotpass.Text = "";
+        }
+
+        private void btnlogin_Click_1(object sender, EventArgs e)
+        {
+            requete = "SELECT id_compte FROM compte WHERE Mot_de_passe='" + a.CryptageMD5(txtmotpass.Text) + "' and  login='" + txtlogin.Text + "'";
+            if (a.ResultatRequette1(requete) != 0)
+            {
+                int idcompte = a.ResultatRequette1(requete);
+                requete = "select login from compte where id_compte='" + idcompte + "'";
+                AccesDonnees.login = a.ResultatRequette(requete);
+                this.Visible = false;
+
+                frmDashboard f = new frmDashboard();
+                f.ShowDialog();
+                //AccesDonnees.confirmation = "connexion reussi";
+                //frmConfirmation b = new frmConfirmation();
+                // b.ShowDialog();
+            }
+            else
+            {
+                AccesDonnees.erreur = "saisissez un mot de passe ou un nom d'utilisteur correct";
+                frmErreur f = new frmErreur();
+                f.ShowDialog();
+            }
+        }
+
+        private void btninscrire_Click_1(object sender, EventArgs e)
+        {
+            frmCreationCompte f = new frmCreationCompte();
+            f.ShowDialog();
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmMotDePassOublie f = new frmMotDePassOublie();
+            f.ShowDialog();
+        }
+
+        private void txtmotpass_TextChanged_1(object sender, EventArgs e)
+        {
+            txtmotpass.UseSystemPasswordChar = true;
+        }
+
+        private void txtlogin_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

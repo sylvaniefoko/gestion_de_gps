@@ -49,13 +49,14 @@ namespace APPSGestionDesInstallationsGPS
             cboservice.Text = "";
             txtcommercial.Text = "";
             cboclient.Text = "";
-            requete = "SELECT id_commande,concat(nom,' ',prenom),Date_commande,lieu,quantite FROM commande c, client cc WHERE cc.id_client=c.id_client;";
+            requete = "SELECT id_commande,concat(nom,' ',prenom),c.id_client,Date_commande,lieu,quantite FROM commande c, client cc WHERE cc.id_client=c.id_client;";
             a.ChargeTable(dataGridView2, requete);
             cboclient.Enabled = false;
             dtpdate2.Enabled = false;
             btnmodifier.Enabled = false;
             btnEnregistrer.Enabled = false;
-            btnmodifier2.Visible = false; 
+            btnmodifier2.Visible = false;
+            btnok.Visible = true;
                   
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -79,7 +80,8 @@ namespace APPSGestionDesInstallationsGPS
         private void btnmodifier_Click(object sender, EventArgs e)
         {
             idtechnicien();
-            requete = "update installation set statut='" + cbostatut.Text + "', id_technicien1='"+idtechnicien1+ "', id_technicien2='" + idtechnicien2 + "' ,id_technicien3='" + idtechnicien3 + "', id_technicien4='" + idtechnicien4 + "',id_technicien5='"+idtechnicien5+ "',type_service='" + cboservice.Text + "',nom_commercial='" + txtcommercial.Text + "' where id_installation='" + idinstallation+"'" ;
+            idinstallation= Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            requete = "update installation set statut='" + cbostatut.Text + "', id_technicien1='"+idtechnicien1+ "', id_technicien2='" + idtechnicien2 + "' ,id_technicien3='" + idtechnicien3 + "', id_technicien4='" + idtechnicien4 + "',id_technicien5='"+idtechnicien5+ "',type_service='" + cboservice.Text + "',nom_commercial='" + txtcommercial.Text + "',statut_payement='" + cbostatutpay.Text + "' where id_installation='" + idinstallation+"'" ;
             a.ExecuteRequette(requete);
             chargement();          
         }
@@ -114,6 +116,7 @@ namespace APPSGestionDesInstallationsGPS
             requete = "select concat(nom,' ',prenom) from technicien where id_technicien='" + idtechnicien5 + "'";
             cbotechnicien5.Text = a.ResultatRequette(requete);
             cbostatut.Text = Convert.ToString(dataGridView1.CurrentRow.Cells[7].Value);
+            cbostatutpay.Text = Convert.ToString(dataGridView1.CurrentRow.Cells[8].Value);
         }
         private void dataGridView2_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -132,17 +135,21 @@ namespace APPSGestionDesInstallationsGPS
                 btnmodifier2.Visible = true;
                 btnok.Visible = false;
             }
-            if (a.ResultatRequette1(requete) == 0)
+            else
             {
-                idclient = Convert.ToInt32(dataGridView2.CurrentRow.Cells[1].Value);
-                requete = "select concat(nom,' ',prenom) from client where id_client='" + idclient + "'";
-                string client = a.ResultatRequette(requete);
-                AccesDonnees.confirmation = "Vous venez de selectionner la commande de "+client+", du " + a.date_vers_mysql(dtpDate.Text) + "";
-                frmConfirmation f = new frmConfirmation();
-                f.ShowDialog();
-                btnmodifier.Enabled = false;
-                btnok.Visible = true;
-            }                     
+                if (a.ResultatRequette1(requete) == 0)
+                {
+                    idclient = Convert.ToInt32(dataGridView2.CurrentRow.Cells[1].Value);
+                    requete = "select concat(nom,' ',prenom) from client where id_client='" + idclient + "'";
+                    string client = a.ResultatRequette(requete);
+                    AccesDonnees.confirmation = "Vous venez de selectionner la commande de " + client + ", du " + a.date_vers_mysql(dtpDate.Text) + "";
+                    frmConfirmation f = new frmConfirmation();
+                    f.ShowDialog();
+                    btnmodifier.Enabled = false;
+                    btnok.Visible = true;
+                }
+            }
+                               
         }
 
         private void nom_CheckedChanged(object sender, EventArgs e)
@@ -198,9 +205,9 @@ namespace APPSGestionDesInstallationsGPS
             }
             else
             {
-                commission = 7000 * quatite;
+                commission = 8000 * quatite;
             }
-            requete = "INSERT INTO `installation`(`id_commande`, `id_technicien1`,`id_technicien2`,`id_technicien3`,`id_technicien4`,`id_technicien5` ,`date_installation`, `statut`,`type_service`,`nom_commercial`) VALUES ('" + idcommande + "','" + idtechnicien1 + "','" + idtechnicien2 + "','" + idtechnicien3 + "','" + idtechnicien4 + "','" + idtechnicien5 + "','" + a.date_vers_mysql(dtpDate.Text) + "','" + cbostatut.Text + "','" + cboservice.Text + "','" + txtcommercial.Text +"')";
+            requete = "INSERT INTO `installation`(`id_commande`, `id_technicien1`,`id_technicien2`,`id_technicien3`,`id_technicien4`,`id_technicien5` ,`date_installation`, `statut`,`type_service`,`nom_commercial`,`satut_payement`) VALUES ('" + idcommande + "','" + idtechnicien1 + "','" + idtechnicien2 + "','" + idtechnicien3 + "','" + idtechnicien4 + "','" + idtechnicien5 + "','" + a.date_vers_mysql(dtpDate.Text) + "','" + cbostatut.Text + "','" + cboservice.Text + "','" + txtcommercial.Text + "','" + cbostatutpay.Text +"')";
             a.ExecuteRequette(requete);
             requete = "select id_installation from installation where id_commande='" + idcommande + "'and `id_technicien1`='" + idtechnicien1 + "'and `id_technicien2`='" + idtechnicien2 + "'and `id_technicien3`='" + idtechnicien3 + "'and `id_technicien4`='" + idtechnicien4 + "'and `id_technicien5`='" + idtechnicien5 + "' and `date_installation`='" + a.date_vers_mysql(dtpDate.Text) + "'and  `statut`='" + cbostatut.Text + "'  ";
             idinstallation = a.ResultatRequette1(requete);
@@ -299,23 +306,33 @@ namespace APPSGestionDesInstallationsGPS
         {
             int num = 0;
             int imei = 0;
-            if (txtnumerrogps.Text == "")
+            if (txtnumerrogps.Text == "" || txtimei.Text == "")
             {
-                num_gps[compteur_vehicule] = 0;
-            }
-            else {
-                num = Convert.ToInt32(txtnumerrogps.Text);
-                num_gps[compteur_vehicule] = num;
-            }
-            if (txtimei.Text =="")
-            {
-                imei_gps[compteur_vehicule] = 0;
+                idinstallation = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                AccesDonnees.erreur = "Veuillez remplir tous les champs";
+                frmErreur f = new frmErreur();
+                f.ShowDialog();
             }
             else
             {
-                imei=Convert.ToInt32(txtimei.Text);
-                imei_gps[compteur_vehicule] = imei;
-            }               
+                if (txtnumerrogps.Text == "")
+                {
+                    num_gps[compteur_vehicule] = 0;
+                }
+                else
+                {
+                    num = Convert.ToInt32(txtnumerrogps.Text);
+                    num_gps[compteur_vehicule] = num;
+                }
+                if (txtimei.Text == "")
+                {
+                    imei_gps[compteur_vehicule] = 0;
+                }
+                else
+                {
+                    imei = Convert.ToInt32(txtimei.Text);
+                    imei_gps[compteur_vehicule] = imei;
+                }
                 requete = "SELECT id_vehicule FROM vehicule , cat_vehicule WHERE vehicule.id_catvehicule = cat_vehicule.id_catvehicule AND vehicule.id_commande = '" + idcommande + "' and concat(categorie_vehicule,' ', marque_vehicule,' ', immatriculation_vehicule)= '" + cbovehicule.Text + "'";
                 idvehicule = a.ResultatRequette1(requete);
                 idvehic[compteur_vehicule] = idvehicule;
@@ -324,6 +341,7 @@ namespace APPSGestionDesInstallationsGPS
                 txtimei.Text = "";
                 txtnumerrogps.Text = "";
                 cbovehicule.Text = "";
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -357,7 +375,7 @@ namespace APPSGestionDesInstallationsGPS
             if (nom.Checked==true)
             {
                 cboclient.Enabled = true;                
-                requete = "select concat(nom,' ',prenom),Date_commande,lieu,quantite from commande c,client cl where c.id_client='" + idclient + "' and cl.id_client='"+idclient+"' and c.id_commande='"+idcommande+"'";
+                requete = "select concat(nom,' ',prenom),Date_commande,lieu,c.id_client,quantite from commande c,client cl where c.id_client='" + idclient + "' and cl.id_client='"+idclient+"' and c.id_commande='"+idcommande+"'";
                 a.ChargeTable(dataGridView2, requete);
             }
          
@@ -371,7 +389,7 @@ namespace APPSGestionDesInstallationsGPS
             {
                 dtpdate2.Enabled = true;
                 cboclient.Enabled = true;              
-                requete = "select id_commande,concat(nom,' ',prenom),Date_commande,lieu,quantite from commande c,client cl where Date_commande='" + a.date_vers_mysql(dtpdate2.Text) + "' and c.id_client='" + idclient+ "'and cl.id_client='" + idclient + "' and c.id_commande='" + idcommande + "'";
+                requete = "select id_commande,concat(nom,' ',prenom),Date_commande,lieu,quantite,c.id_client from commande c,client cl where Date_commande='" + a.date_vers_mysql(dtpdate2.Text) + "' and c.id_client='" + idclient+ "'and cl.id_client='" + idclient + "' and c.id_commande='" + idcommande + "'";
                 a.ChargeTable(dataGridView2, requete);
             }
             cboclient.Text = "";

@@ -52,6 +52,7 @@ namespace APPSGestionDesInstallationsGPS
 
             frmInstallation f = new frmInstallation();
             f.ShowDialog();
+
          
         }
 
@@ -161,6 +162,8 @@ namespace APPSGestionDesInstallationsGPS
 
         private void frmDashboard_Load(object sender, EventArgs e)
         {
+            frmConnexion f = new frmConnexion();
+            f.Close();
             Nom_utilisateur.Text = AccesDonnees.login;
         }
 
@@ -173,6 +176,11 @@ namespace APPSGestionDesInstallationsGPS
         {
 
             
+        }
+
+        private void chart7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

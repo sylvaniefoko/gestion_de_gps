@@ -51,7 +51,9 @@ namespace APPSGestionDesInstallationsGPS
         }
         private void frmCommande_Load(object sender, EventArgs e)
         {
+     
             chargement();
+            
         }
         void chargement()
         {
@@ -84,7 +86,7 @@ namespace APPSGestionDesInstallationsGPS
             a.ChargeCombo(cbosuivi, requete);
             btnavancer.Visible = false;   
             btnmodifier2.Visible = false;
-      
+
         }
 
 
@@ -142,7 +144,7 @@ namespace APPSGestionDesInstallationsGPS
             prix_vehicule_legers = a.ResultatRequette1(requete);
             requete = "select prix_installation from Cat_vehicule where categorie_vehicule='Moto cyclette'";
             prix_moto = a.ResultatRequette1(requete);
-            requete = "select prix_installation from Cat_vehicule where categorie_vehicule='Tricycle a moteur'";
+            requete = "select prix_installation from Cat_vehicule where categorie_vehicule='Tricycle à moteur'";
             prix_tricycle = a.ResultatRequette1(requete);
             int sejour = 0;
             int deplacement = 0;
@@ -184,26 +186,19 @@ namespace APPSGestionDesInstallationsGPS
                 {
                     Quantite_moto = 0;
                 }
+            }
                 prix_poids_lourds = prix_poids_lourds * Quantite_poids_lourds;
                 prix_vehicule_legers = prix_vehicule_legers * Quantite_vehicule_legers;
                 prix_moto = prix_moto * Quantite_moto;
                 prix_tricycle = prix_tricycle * Quantite_tricycle;
                 Prix_installation = prix_poids_lourds + prix_vehicule_legers + prix_moto + prix_tricycle + sejour + deplacement;
                 compte_vehicule = Quantite_tricycle + Quantite_vehicule_legers + Quantite_poids_lourds + Quantite_moto;
-
-                if (cbosuivi.Text != "")
-                {
-                    txtprix_installation.Text = (Prix_installation).ToString();
-                    txtprix_suivi.Text = (prixsuivi * dure).ToString();
-                    Prix_total = (prixsuivi * dure) + Prix_installation;
-                    txtprix_total.Text = (Prix_total).ToString();
-                    btnEnregistrer.Enabled = true;
-                }
-                else
-                {
-                    MessageBox.Show("remplir le champ suivi");
-                }
-            }
+                txtprix_installation.Text = (Prix_installation).ToString();
+                txtprix_suivi.Text = (prixsuivi * dure).ToString();
+                Prix_total = (prixsuivi * dure) + Prix_installation;
+                txtprix_total.Text = (Prix_total).ToString();
+                btnEnregistrer.Enabled = true;
+            
         }
 
         private void txtlegers_TextChanged(object sender, EventArgs e)
@@ -216,7 +211,7 @@ namespace APPSGestionDesInstallationsGPS
            
             requete = "select id_client from client where concat(Nom,' ',Prenom)='" + cboclient.Text + "'";
             idclient = a.ResultatRequette1(requete);
-            requete = "INSERT INTO `commande`( `id_client`,`quantite` ,`prix_reduit`, `prix_total`,`prix_suivi`,`prix_installation`,`Date_commande`,`frais_deplacement`, `frais_sejour`,`lieu`) VALUES('" + idclient + "','" + compte_vehicule + "','" +txtprix_reduit.Text + "','"+txtprix_total.Text+"','"+txtprix_suivi.Text+"','"+txtprix_installation.Text+"','" + a.date_vers_mysql(dtpDate.Text) + "','" + txtdeplacement.Text+"','" + txtsejour.Text+"','" + txtlieu.Text + "')";
+            requete = "INSERT INTO `commande`( `id_client`,`quantite` ,`prix_reduit`, `prix_total`,`prix_suivi`,`prix_installation`,`Date_commande`,`frais_deplacement`, `frais_sejour`,`lieu`,`type_installation`) VALUES('" + idclient + "','" + compte_vehicule + "','" +txtprix_reduit.Text + "','"+txtprix_total.Text+"','"+txtprix_suivi.Text+"','"+txtprix_installation.Text+"','" + a.date_vers_mysql(dtpDate.Text) + "','" + txtdeplacement.Text+"','" + txtsejour.Text+"','" + txtlieu.Text + "','"+cbotype.Text+"')";
             a.ExecuteRequette(requete);
             requete = "SELECT `id_commande` FROM `commande` WHERE  `id_client`='" + idclient + "' and `Date_commande`='" + a.date_vers_mysql(dtpDate.Text) + "' and `lieu`='" + txtlieu.Text + "' and   `prix_total`='" + txtprix_total.Text + "' and `prix_reduit`='" + txtprix_reduit.Text + "' and  `quantite`='" + compte_vehicule + "'";
             int id_commande = a.ResultatRequette1(requete);
@@ -234,10 +229,12 @@ namespace APPSGestionDesInstallationsGPS
 
         private void cbosuivi_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbosuivi.Text == "aucun")
+            if (cbosuivi.Text == "Aucun")
             {
                 txtdure.ReadOnly = true;
-            }else { txtdure.ReadOnly = false; }
+            }else {
+                txtdure.ReadOnly = false;
+            }
         }
 
         private void txtdure_KeyPress(object sender, KeyPressEventArgs e)
@@ -366,8 +363,16 @@ namespace APPSGestionDesInstallationsGPS
         private void btnok_Click(object sender, EventArgs e)
         {
             int valuedurer = 0;
+            if (txtmarque.Text == "" || txtimmatriculation.Text == "" || cbosuivi.Text == "" || cbocategorie.Text=="")
+            {
                 AccesDonnees.erreur = "Veuillez remplir tous les champs";
                 frmErreur f = new frmErreur();
+                f.ShowDialog();
+            }
+            else
+            {
+
+
                 marquevehicule[compteur_veh] = txtmarque.Text;
                 tab_immatriculation[compteur_veh] = txtimmatriculation.Text;
                 tab_categorie[compteur_veh] = a.ResultatRequette1("SELECT `id_catvehicule` FROM `cat_vehicule` WHERE `categorie_vehicule`= '" + cbocategorie.Text + "'");
@@ -391,7 +396,8 @@ namespace APPSGestionDesInstallationsGPS
                 int prix = a.ResultatRequette1(requete);
                 prixsuivi = prixsuivi + prix;
                 Quantite_de_chaque_vehicule();
-                vider_champs();        
+                vider_champs();
+            }      
         }
         void vider_champs()
         {
@@ -403,7 +409,7 @@ namespace APPSGestionDesInstallationsGPS
         }
         private void btnmodifier_Click(object sender, EventArgs e)
         {
-            requete = "UPDATE  `commande` SET `lieu`='" + txtlieu.Text + "',`prix_total`='" + txtprix_installation.Text + "',`prix_reduit`='" + txtprix_reduit.Text + "',`quantite`='" + compte_vehicule + "'  WHERE id_commande='" + commande + "'";
+            requete = "UPDATE  `commande` SET `lieu`='" + txtlieu.Text + "',`prix_total`='" + txtprix_installation.Text + "',`prix_reduit`='" + txtprix_reduit.Text + "',`quantite`='" + compte_vehicule + "',`type_installation`='" + cbotype.Text +"'  WHERE id_commande='" + commande + "'";
             a.ExecuteRequette(requete);
             chargement();
           

@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnFermer = new System.Windows.Forms.Button();
             this.btnannuler = new System.Windows.Forms.Button();
             this.btnmodifier = new System.Windows.Forms.Button();
@@ -63,15 +67,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.cbostatut = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.id_installation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_commande = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_technicien1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_technicien2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_technicien3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_technicien4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_technicien5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.date_installation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbotechnicien2 = new System.Windows.Forms.ComboBox();
             this.Nom_2 = new System.Windows.Forms.Label();
             this.cbotechnicien3 = new System.Windows.Forms.ComboBox();
@@ -85,6 +80,18 @@
             this.txtcommercial = new System.Windows.Forms.TextBox();
             this.cboservice = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbostatutpay = new System.Windows.Forms.ComboBox();
+            this.id_installation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_commande = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_technicien1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_technicien2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_technicien3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_technicien4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_technicien5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_installation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -96,7 +103,7 @@
             // 
             this.btnFermer.FlatAppearance.BorderSize = 0;
             this.btnFermer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFermer.Location = new System.Drawing.Point(911, 572);
+            this.btnFermer.Location = new System.Drawing.Point(906, 581);
             this.btnFermer.Name = "btnFermer";
             this.btnFermer.Size = new System.Drawing.Size(98, 25);
             this.btnFermer.TabIndex = 36;
@@ -108,7 +115,7 @@
             // 
             this.btnannuler.FlatAppearance.BorderSize = 0;
             this.btnannuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnannuler.Location = new System.Drawing.Point(495, 580);
+            this.btnannuler.Location = new System.Drawing.Point(495, 581);
             this.btnannuler.Name = "btnannuler";
             this.btnannuler.Size = new System.Drawing.Size(98, 25);
             this.btnannuler.TabIndex = 35;
@@ -360,6 +367,14 @@
             // 
             // dataGridView2
             // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_vehicule,
@@ -369,8 +384,24 @@
             this.lieu,
             this.quantite,
             this.Column1});
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView2.Location = new System.Drawing.Point(13, 19);
             this.dataGridView2.Name = "dataGridView2";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView2.Size = new System.Drawing.Size(546, 187);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
@@ -442,11 +473,11 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 242);
+            this.label7.Location = new System.Drawing.Point(21, 242);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 17);
+            this.label7.Size = new System.Drawing.Size(144, 17);
             this.label7.TabIndex = 30;
-            this.label7.Text = "statut:";
+            this.label7.Text = "statut de l\'installation:";
             // 
             // cbostatut
             // 
@@ -454,10 +485,9 @@
             this.cbostatut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbostatut.FormattingEnabled = true;
             this.cbostatut.Items.AddRange(new object[] {
-            "En Cours",
-            "Stand By",
+            "En cours",
             "Terminer",
-            "Non Fait"});
+            "Stand by"});
             this.cbostatut.Location = new System.Drawing.Point(164, 236);
             this.cbostatut.Name = "cbostatut";
             this.cbostatut.Size = new System.Drawing.Size(291, 25);
@@ -465,14 +495,14 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_installation,
@@ -483,76 +513,22 @@
             this.id_technicien4,
             this.id_technicien5,
             this.statut,
+            this.Column2,
             this.date_installation});
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.Location = new System.Drawing.Point(13, 20);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(464, 188);
             this.dataGridView1.TabIndex = 32;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // id_installation
-            // 
-            this.id_installation.DataPropertyName = "id_installation";
-            this.id_installation.HeaderText = "id_installation";
-            this.id_installation.Name = "id_installation";
-            this.id_installation.Visible = false;
-            // 
-            // id_commande
-            // 
-            this.id_commande.DataPropertyName = "id_commande";
-            this.id_commande.HeaderText = "id_commande";
-            this.id_commande.Name = "id_commande";
-            this.id_commande.Visible = false;
-            // 
-            // id_technicien1
-            // 
-            this.id_technicien1.DataPropertyName = "id_technicien1";
-            this.id_technicien1.HeaderText = "id_technicien1";
-            this.id_technicien1.Name = "id_technicien1";
-            this.id_technicien1.Visible = false;
-            // 
-            // id_technicien2
-            // 
-            this.id_technicien2.DataPropertyName = "id_technicien2";
-            this.id_technicien2.HeaderText = "id_technicien2";
-            this.id_technicien2.Name = "id_technicien2";
-            this.id_technicien2.Visible = false;
-            // 
-            // id_technicien3
-            // 
-            this.id_technicien3.DataPropertyName = "id_technicien3";
-            this.id_technicien3.HeaderText = "id_technicien3";
-            this.id_technicien3.Name = "id_technicien3";
-            this.id_technicien3.Visible = false;
-            // 
-            // id_technicien4
-            // 
-            this.id_technicien4.DataPropertyName = "id_technicien4";
-            this.id_technicien4.HeaderText = "id_technicien4";
-            this.id_technicien4.Name = "id_technicien4";
-            this.id_technicien4.Visible = false;
-            // 
-            // id_technicien5
-            // 
-            this.id_technicien5.DataPropertyName = "id_technicien5";
-            this.id_technicien5.HeaderText = "id_technicien5";
-            this.id_technicien5.Name = "id_technicien5";
-            this.id_technicien5.Visible = false;
-            // 
-            // statut
-            // 
-            this.statut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.statut.DataPropertyName = "statut";
-            this.statut.HeaderText = "Statut";
-            this.statut.Name = "statut";
-            // 
-            // date_installation
-            // 
-            this.date_installation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.date_installation.DataPropertyName = "date_installation";
-            this.date_installation.HeaderText = "Date de l\'installation";
-            this.date_installation.Name = "date_installation";
             // 
             // cbotechnicien2
             // 
@@ -718,12 +694,110 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Enregistrer les techniciens";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 322);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(135, 17);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Statut de payement:";
+            // 
+            // cbostatutpay
+            // 
+            this.cbostatutpay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbostatutpay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbostatutpay.FormattingEnabled = true;
+            this.cbostatutpay.Items.AddRange(new object[] {
+            "Payé",
+            "Impayé",
+            "Offert"});
+            this.cbostatutpay.Location = new System.Drawing.Point(164, 317);
+            this.cbostatutpay.Name = "cbostatutpay";
+            this.cbostatutpay.Size = new System.Drawing.Size(291, 26);
+            this.cbostatutpay.TabIndex = 27;
+            this.cbostatutpay.SelectedIndexChanged += new System.EventHandler(this.cbovehicule_SelectedIndexChanged);
+            // 
+            // id_installation
+            // 
+            this.id_installation.DataPropertyName = "id_installation";
+            this.id_installation.HeaderText = "id_installation";
+            this.id_installation.Name = "id_installation";
+            this.id_installation.Visible = false;
+            // 
+            // id_commande
+            // 
+            this.id_commande.DataPropertyName = "id_commande";
+            this.id_commande.HeaderText = "id_commande";
+            this.id_commande.Name = "id_commande";
+            this.id_commande.Visible = false;
+            // 
+            // id_technicien1
+            // 
+            this.id_technicien1.DataPropertyName = "id_technicien1";
+            this.id_technicien1.HeaderText = "id_technicien1";
+            this.id_technicien1.Name = "id_technicien1";
+            this.id_technicien1.Visible = false;
+            // 
+            // id_technicien2
+            // 
+            this.id_technicien2.DataPropertyName = "id_technicien2";
+            this.id_technicien2.HeaderText = "id_technicien2";
+            this.id_technicien2.Name = "id_technicien2";
+            this.id_technicien2.Visible = false;
+            // 
+            // id_technicien3
+            // 
+            this.id_technicien3.DataPropertyName = "id_technicien3";
+            this.id_technicien3.HeaderText = "id_technicien3";
+            this.id_technicien3.Name = "id_technicien3";
+            this.id_technicien3.Visible = false;
+            // 
+            // id_technicien4
+            // 
+            this.id_technicien4.DataPropertyName = "id_technicien4";
+            this.id_technicien4.HeaderText = "id_technicien4";
+            this.id_technicien4.Name = "id_technicien4";
+            this.id_technicien4.Visible = false;
+            // 
+            // id_technicien5
+            // 
+            this.id_technicien5.DataPropertyName = "id_technicien5";
+            this.id_technicien5.HeaderText = "id_technicien5";
+            this.id_technicien5.Name = "id_technicien5";
+            this.id_technicien5.Visible = false;
+            // 
+            // statut
+            // 
+            this.statut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.statut.DataPropertyName = "statut";
+            this.statut.HeaderText = "Statut de l\'installation";
+            this.statut.Name = "statut";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "statut_payement";
+            this.Column2.HeaderText = "statut de payement";
+            this.Column2.Name = "Column2";
+            this.Column2.Visible = false;
+            // 
+            // date_installation
+            // 
+            this.date_installation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.date_installation.DataPropertyName = "date_installation";
+            this.date_installation.HeaderText = "Date de l\'installation";
+            this.date_installation.Name = "date_installation";
+            // 
             // frmInstallation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1071, 625);
+            this.Controls.Add(this.cbostatutpay);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label19);
@@ -789,15 +863,6 @@
         private System.Windows.Forms.Label Nom_5;
         private System.Windows.Forms.ComboBox cbotechnicien5;
         private System.Windows.Forms.Button btnok;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_installation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_commande;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_technicien1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_technicien2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_technicien3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_technicien4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_technicien5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statut;
-        private System.Windows.Forms.DataGridViewTextBoxColumn date_installation;
         private System.Windows.Forms.CheckBox date;
         private System.Windows.Forms.CheckBox nom;
         private System.Windows.Forms.ComboBox cboclient;
@@ -817,5 +882,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.ComboBox cboservice;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbostatutpay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_installation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_commande;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_technicien1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_technicien2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_technicien3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_technicien4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_technicien5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statut;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date_installation;
     }
 }

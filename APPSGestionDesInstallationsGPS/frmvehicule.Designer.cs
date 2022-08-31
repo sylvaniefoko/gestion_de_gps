@@ -52,7 +52,7 @@
             this.prix});
             this.dataGridView1.Location = new System.Drawing.Point(13, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(438, 142);
+            this.dataGridView1.Size = new System.Drawing.Size(438, 234);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -82,7 +82,7 @@
             // btnAnnuler
             // 
             this.btnAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnnuler.Location = new System.Drawing.Point(376, 314);
+            this.btnAnnuler.Location = new System.Drawing.Point(378, 334);
             this.btnAnnuler.Name = "btnAnnuler";
             this.btnAnnuler.Size = new System.Drawing.Size(75, 27);
             this.btnAnnuler.TabIndex = 20;
@@ -93,7 +93,7 @@
             // btnmodifier
             // 
             this.btnmodifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmodifier.Location = new System.Drawing.Point(139, 314);
+            this.btnmodifier.Location = new System.Drawing.Point(141, 334);
             this.btnmodifier.Name = "btnmodifier";
             this.btnmodifier.Size = new System.Drawing.Size(83, 27);
             this.btnmodifier.TabIndex = 18;
@@ -104,7 +104,7 @@
             // btnEnregistrer
             // 
             this.btnEnregistrer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnregistrer.Location = new System.Drawing.Point(8, 314);
+            this.btnEnregistrer.Location = new System.Drawing.Point(10, 334);
             this.btnEnregistrer.Name = "btnEnregistrer";
             this.btnEnregistrer.Size = new System.Drawing.Size(104, 27);
             this.btnEnregistrer.TabIndex = 17;
@@ -116,7 +116,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 184);
+            this.label2.Location = new System.Drawing.Point(12, 258);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 17);
             this.label2.TabIndex = 22;
@@ -126,7 +126,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 240);
+            this.label1.Location = new System.Drawing.Point(10, 297);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 17);
             this.label1.TabIndex = 22;
@@ -137,7 +137,7 @@
             // 
             this.txtPrix.BackColor = System.Drawing.SystemColors.Info;
             this.txtPrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrix.Location = new System.Drawing.Point(165, 234);
+            this.txtPrix.Location = new System.Drawing.Point(167, 291);
             this.txtPrix.Name = "txtPrix";
             this.txtPrix.Size = new System.Drawing.Size(286, 23);
             this.txtPrix.TabIndex = 27;
@@ -147,7 +147,7 @@
             // 
             this.txtcategorie.BackColor = System.Drawing.SystemColors.Info;
             this.txtcategorie.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcategorie.Location = new System.Drawing.Point(165, 178);
+            this.txtcategorie.Location = new System.Drawing.Point(167, 252);
             this.txtcategorie.Name = "txtcategorie";
             this.txtcategorie.Size = new System.Drawing.Size(286, 23);
             this.txtcategorie.TabIndex = 33;
@@ -156,7 +156,7 @@
             // btnSupprimer
             // 
             this.btnSupprimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSupprimer.Location = new System.Drawing.Point(251, 314);
+            this.btnSupprimer.Location = new System.Drawing.Point(253, 334);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(96, 27);
             this.btnSupprimer.TabIndex = 34;

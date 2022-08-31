@@ -56,6 +56,7 @@
             this.suivi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prixinstallation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
             this.txtprix_reduit = new System.Windows.Forms.TextBox();
             this.btnremise = new System.Windows.Forms.Button();
@@ -100,7 +101,7 @@
             // btnEnregistrer
             // 
             this.btnEnregistrer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnregistrer.Location = new System.Drawing.Point(17, 594);
+            this.btnEnregistrer.Location = new System.Drawing.Point(19, 649);
             this.btnEnregistrer.Name = "btnEnregistrer";
             this.btnEnregistrer.Size = new System.Drawing.Size(114, 25);
             this.btnEnregistrer.TabIndex = 44;
@@ -112,7 +113,7 @@
             // 
             this.txtlieu.BackColor = System.Drawing.SystemColors.Info;
             this.txtlieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtlieu.Location = new System.Drawing.Point(141, 357);
+            this.txtlieu.Location = new System.Drawing.Point(143, 412);
             this.txtlieu.Name = "txtlieu";
             this.txtlieu.Size = new System.Drawing.Size(286, 24);
             this.txtlieu.TabIndex = 6;
@@ -120,6 +121,7 @@
             // txtprix_installation
             // 
             this.txtprix_installation.BackColor = System.Drawing.SystemColors.Info;
+            this.txtprix_installation.Enabled = false;
             this.txtprix_installation.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtprix_installation.Location = new System.Drawing.Point(168, 137);
             this.txtprix_installation.Name = "txtprix_installation";
@@ -132,7 +134,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 364);
+            this.label6.Location = new System.Drawing.Point(8, 419);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(123, 18);
             this.label6.TabIndex = 5;
@@ -153,7 +155,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 331);
+            this.label4.Location = new System.Drawing.Point(8, 386);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(125, 18);
             this.label4.TabIndex = 3;
@@ -166,7 +168,7 @@
             this.dtpDate.CustomFormat = "yyyy-MM-dd";
             this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDate.Location = new System.Drawing.Point(141, 323);
+            this.dtpDate.Location = new System.Drawing.Point(143, 378);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(286, 24);
             this.dtpDate.TabIndex = 4;
@@ -202,7 +204,7 @@
             // btnmodifier
             // 
             this.btnmodifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmodifier.Location = new System.Drawing.Point(137, 593);
+            this.btnmodifier.Location = new System.Drawing.Point(139, 648);
             this.btnmodifier.Name = "btnmodifier";
             this.btnmodifier.Size = new System.Drawing.Size(98, 25);
             this.btnmodifier.TabIndex = 45;
@@ -213,7 +215,7 @@
             // btnannuler
             // 
             this.btnannuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnannuler.Location = new System.Drawing.Point(241, 596);
+            this.btnannuler.Location = new System.Drawing.Point(243, 651);
             this.btnannuler.Name = "btnannuler";
             this.btnannuler.Size = new System.Drawing.Size(98, 25);
             this.btnannuler.TabIndex = 46;
@@ -225,7 +227,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 295);
+            this.label2.Location = new System.Drawing.Point(12, 350);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 18);
             this.label2.TabIndex = 1;
@@ -234,7 +236,7 @@
             // btnFermer
             // 
             this.btnFermer.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFermer.Location = new System.Drawing.Point(345, 595);
+            this.btnFermer.Location = new System.Drawing.Point(347, 650);
             this.btnFermer.Name = "btnFermer";
             this.btnFermer.Size = new System.Drawing.Size(111, 27);
             this.btnFermer.TabIndex = 47;
@@ -285,16 +287,18 @@
             this.Prixtotal,
             this.suivi,
             this.prixinstallation,
-            this.Quantite});
+            this.Quantite,
+            this.Column1});
             this.dataGridView1.Location = new System.Drawing.Point(13, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1371, 243);
+            this.dataGridView1.Size = new System.Drawing.Size(1371, 284);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick_1);
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // id_commande
             // 
+            this.id_commande.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.id_commande.DataPropertyName = "id_commande";
             this.id_commande.HeaderText = "id_commande";
             this.id_commande.Name = "id_commande";
@@ -371,6 +375,12 @@
             this.Quantite.HeaderText = "Quantité";
             this.Quantite.Name = "Quantite";
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "type_installation";
+            this.Column1.HeaderText = "Type d\'installation";
+            this.Column1.Name = "Column1";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -384,6 +394,7 @@
             // txtprix_reduit
             // 
             this.txtprix_reduit.BackColor = System.Drawing.SystemColors.Info;
+            this.txtprix_reduit.Enabled = false;
             this.txtprix_reduit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtprix_reduit.Location = new System.Drawing.Point(168, 268);
             this.txtprix_reduit.Name = "txtprix_reduit";
@@ -406,6 +417,7 @@
             // txtlegers
             // 
             this.txtlegers.BackColor = System.Drawing.SystemColors.Info;
+            this.txtlegers.Enabled = false;
             this.txtlegers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtlegers.Location = new System.Drawing.Point(121, 206);
             this.txtlegers.Name = "txtlegers";
@@ -419,6 +431,7 @@
             // txttricycle
             // 
             this.txttricycle.BackColor = System.Drawing.SystemColors.Info;
+            this.txttricycle.Enabled = false;
             this.txttricycle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttricycle.Location = new System.Drawing.Point(344, 203);
             this.txttricycle.Name = "txttricycle";
@@ -430,6 +443,7 @@
             // txtlourds
             // 
             this.txtlourds.BackColor = System.Drawing.SystemColors.Info;
+            this.txtlourds.Enabled = false;
             this.txtlourds.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtlourds.Location = new System.Drawing.Point(125, 253);
             this.txtlourds.Name = "txtlourds";
@@ -441,6 +455,7 @@
             // txtmoto
             // 
             this.txtmoto.BackColor = System.Drawing.SystemColors.Info;
+            this.txtmoto.Enabled = false;
             this.txtmoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmoto.Location = new System.Drawing.Point(344, 251);
             this.txtmoto.Name = "txtmoto";
@@ -497,7 +512,7 @@
             this.cboclient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboclient.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboclient.FormattingEnabled = true;
-            this.cboclient.Location = new System.Drawing.Point(141, 287);
+            this.cboclient.Location = new System.Drawing.Point(143, 342);
             this.cboclient.Name = "cboclient";
             this.cboclient.Size = new System.Drawing.Size(286, 25);
             this.cboclient.TabIndex = 2;
@@ -587,7 +602,7 @@
             this.groupBox1.Controls.Add(this.cbosuivi);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(465, 261);
+            this.groupBox1.Location = new System.Drawing.Point(467, 316);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(420, 348);
             this.groupBox1.TabIndex = 76;
@@ -702,6 +717,7 @@
             // txtprix_suivi
             // 
             this.txtprix_suivi.BackColor = System.Drawing.SystemColors.Info;
+            this.txtprix_suivi.Enabled = false;
             this.txtprix_suivi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtprix_suivi.Location = new System.Drawing.Point(168, 100);
             this.txtprix_suivi.Name = "txtprix_suivi";
@@ -732,6 +748,7 @@
             // txtprix_total
             // 
             this.txtprix_total.BackColor = System.Drawing.SystemColors.Info;
+            this.txtprix_total.Enabled = false;
             this.txtprix_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtprix_total.Location = new System.Drawing.Point(168, 173);
             this.txtprix_total.Name = "txtprix_total";
@@ -744,7 +761,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(3, 403);
+            this.label22.Location = new System.Drawing.Point(5, 458);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(128, 18);
             this.label22.TabIndex = 7;
@@ -759,8 +776,8 @@
             this.cbotype.FormattingEnabled = true;
             this.cbotype.Items.AddRange(new object[] {
             "Locale",
-            "Nationale"});
-            this.cbotype.Location = new System.Drawing.Point(141, 398);
+            "Internationale"});
+            this.cbotype.Location = new System.Drawing.Point(143, 453);
             this.cbotype.Name = "cbotype";
             this.cbotype.Size = new System.Drawing.Size(286, 25);
             this.cbotype.TabIndex = 8;
@@ -785,7 +802,7 @@
             this.groupBox2.Controls.Add(this.btnremise);
             this.groupBox2.Controls.Add(this.txtdeplacement);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(905, 261);
+            this.groupBox2.Location = new System.Drawing.Point(907, 316);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(477, 348);
             this.groupBox2.TabIndex = 77;
@@ -797,7 +814,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1392, 640);
+            this.ClientSize = new System.Drawing.Size(1392, 695);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.groupBox1);
@@ -894,5 +911,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn suivi;
         private System.Windows.Forms.DataGridViewTextBoxColumn prixinstallation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantite;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

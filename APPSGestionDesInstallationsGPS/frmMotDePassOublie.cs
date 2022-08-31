@@ -16,17 +16,9 @@ namespace APPSGestionDesInstallationsGPS
     {
         AccesDonnees a = new AccesDonnees();
         string requete="";
-            [DllImport("gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-            private static extern IntPtr CreateRoundRectRgn
-     (int nleftRect,
-     int nTopRect,
-     int nBottomRect,
-     int RightRect,
-     int WidhtEllipse,
-     int HeightEllipse);
+
             public frmMotDePassOublie()
         {
-                Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
                 InitializeComponent();
         }
 

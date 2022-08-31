@@ -18,6 +18,7 @@ namespace APPSGestionDesInstallationsGPS
         int  lematricule=0;            
         public frmVehicule()
         {
+
             InitializeComponent();
         }
 
@@ -67,6 +68,7 @@ namespace APPSGestionDesInstallationsGPS
         }
         void chargement()
         {
+     
             requete = "select * from Cat_vehicule ";
             a.ChargeTable(dataGridView1, requete);
             txtPrix.Text = "";      
